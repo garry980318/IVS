@@ -1,0 +1,37 @@
+-------------------------------------------------------------------------------------------------------------------------
+
+    1) Termíny
+        - 16.03.2018 - začiatok projektu
+                     - vytvorenie plánu a README
+        - 26.03.2018 - vytvorenie "interface" pre "MathLibrary"
+                     - vytvorenie testov podľa "interface" pre "MathLibrary"
+                     - implementácia "MathLibrary"
+                     - vytvorenie GUI
+        - 06.04.2018 - implementácia programu pre výpočet štandardnej odchýlky
+                     - zlinkovanie "MathLibrary" s GUI
+        - 13.04.2018 - 
+        - 16.04.2018 -
+        - 20.04.2018 -
+        - 26.04.2018 -
+        - 10.05.2018 -
+
+    2) Pridelenie úloh jednotlivým členom týmu
+        - xbolfr00 -
+        - xgrenc00 -
+        - xholub42 -
+        - xvasic27 -
+
+    3) Komunikácia a pravidlá
+        - zvolený komunikačný nástroj: Discord
+        - Na discorde sme si vytvorili vlastný server, kde sme vytvorili oddelené "text channels"
+          pre každý podproblém projektu.
+        - Členovia týmu musia byť na Discorde pokiaľ je to možné neustále aktívny.
+
+    4) Nástroj na správu verzií, repozitár
+        - zvolený nástroj pre správu verzií: GIT
+        - server: https://github.com/
+        - Náš repozitár vlastní vedúci týmu - Radoslav Grenčík (xgrenc00).
+          URL: https://github.com/garry980318/IVS.
+          Do repozitára sme pridali účet "ivskontrola" (Invitation link: https://github.com/garry980318/IVS/invitations).
+
+-------------------------------------------------------------------------------------------------------------------------
