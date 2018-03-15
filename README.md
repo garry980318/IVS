@@ -1,4 +1,4 @@
-Prostredi
+Prostredie/platforma
 ---------
 
 Ubuntu 64bit
@@ -12,7 +12,7 @@ DedSec
 - xholub42 Ondřej Holub
 - xvasic27 Michal Vašíček
 
-Licence
+Licencia
 -------
 
-Tento program je poskytovan
+Tento program je poskytovaný pod [GNU General Public License v3.0](LICENSE).
