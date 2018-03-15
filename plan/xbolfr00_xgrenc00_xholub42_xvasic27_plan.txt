@@ -1,0 +1,72 @@
+-------------------------------------------------------------------------------------------------------------------------
+
+    1) Termíny
+
+        - 16.03.2018 - začiatok projektu
+                     - vytvorenie repozitáru
+                     - vytvorenie plánu a README
+        - 26.03.2018 - vytvorenie "interface" pre "MathLibrary"
+                     - vytvorenie testov podľa "interface" pre "MathLibrary"
+                     - implementácia "MathLibrary"
+                     - vytvorenie GUI
+        - 06.04.2018 - implementácia programu pre výpočet štandardnej odchýlky
+                     - zlinkovanie "MathLibrary" s GUI
+        - 13.04.2018 - profiling
+                     - debugging
+                     - vygenerovanie dokumentácie pomocou Doxygen
+                     - vytvorenie inštalátora/odinštalátora
+        - 16.04.2018 - GUI mockup
+                     - vytvorenie Makefile
+        - 20.04.2018 - vytvorenie user dokumentácie
+                     - vytvorenie súboru "skutecnost.text" (rozdiely medzi plánom a skutočnosťou)
+                     - vytvorenie hodnotenia členov týmu (hodnoceni.txt)
+        - 26.04.2018 - problémy
+        - 10.05.2018 - vytvorenie prezentácie
+
+    2) Pridelenie úloh jednotlivým členom týmu
+
+        - (René Bolf)        xbolfr00 - project plan (MS Planner)
+                                      - GUI
+                                      - GUI mockup
+                                      - link GUI and "MathLibrary"
+                                      - Installator/Uninstallator
+
+        - (Radoslav Grenčík) xgrenc00 - project plan
+                                      - GUI
+                                      - link GUI and "MathLibrary"
+                                      - GUI mockup
+                                      - README.md
+                                      - vytvorenie repozitáru
+
+        - (Ondřej Holub)     xholub42 - programová dokumentácia
+                                      - user dokumentácia
+                                      - Makefile
+                                      - implementácia programu "štandardnej odchýlky"
+                                      - debugging
+
+        - (Michal Vašíček)   xvasic27 - interface pre "MathLibrary"
+                                      - testy "MathLibrary"
+                                      - implementácia "MathLibrary"
+                                      - profiling
+
+        - spoločné úlohy              - hodnotenie členov
+                                      - "skutecnost.txt"
+                                      - problémy
+                                      - PDF prezentácia
+
+    3) Komunikácia a pravidlá
+
+        - zvolený komunikačný nástroj: Discord
+        - Na discorde sme si vytvorili vlastný server, kde sme vytvorili oddelené "text channels"
+          pre každý podproblém projektu.
+        - Členovia týmu musia byť na Discorde pokiaľ je to možné neustále aktívny.
+
+    4) Nástroj na správu verzií, repozitár
+
+        - zvolený nástroj pre správu verzií: GIT
+        - server: https://github.com/
+        - Náš repozitár vlastní vedúci týmu - Radoslav Grenčík (xgrenc00).
+          URL: https://github.com/garry980318/IVS.
+          Do repozitára sme pridali účet "ivskontrola" (Invitation link: https://github.com/garry980318/IVS/invitations).
+
+-------------------------------------------------------------------------------------------------------------------------
