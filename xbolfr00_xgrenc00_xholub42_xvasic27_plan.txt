@@ -26,3 +26,5 @@
         - Náš repozitár je vlastnený vedúcim týmu - Radoslavom Grenčíkom.
           URL: https://github.com/garry980318/IVS.
           Do repozitára sme pridali účet "ivskontrola". (Invitation link: https://github.com/garry980318/IVS/invitations)
+
+-------------------------------------------------------------------------------------------------------------------------
