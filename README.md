@@ -6,7 +6,7 @@ Ubuntu 64bit
 Autori
 ------
 
-DedSec
+**DedSec**
 - xbolfr00 René Bolf
 - xgrenc00 Radoslav Grenčík
 - xholub42 Ondřej Holub

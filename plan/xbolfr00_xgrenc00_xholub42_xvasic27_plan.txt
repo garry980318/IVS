@@ -38,7 +38,8 @@
                                       - README.md
                                       - vytvorenie repozitáru
 
-        - (Ondřej Holub)     xholub42 - programová/user dokumentácia
+        - (Ondřej Holub)     xholub42 - programová dokumentácia
+                                      - user dokumentácia
                                       - Makefile
                                       - implementácia programu "štandardnej odchýlky"
                                       - debugging
