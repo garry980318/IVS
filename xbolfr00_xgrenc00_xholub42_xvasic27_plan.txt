@@ -15,27 +15,14 @@
         - xvasic27 -
 
     3) Komunikácia a pravidlá
+        - zvolený komunikačný nástroj: Discord
+        - Na discorde sme si vytvorili vlastný server, kde sme vytvorili oddelené "text channels"
+          pre každý podproblém projektu.
+        - Členovia týmu musia byť na Discorde pokiaľ je to možné neustále aktívny.
 
     4) Nástroj na správu verzií, repozitár
         - zvolený nástroj na správu verzií: GIT
         - server: https://github.com/
-        - Náš repozitár je vlastnený vedúcim týmu Radoslavom Grenčíkom.
+        - Náš repozitár je vlastnený vedúcim týmu - Radoslavom Grenčíkom.
           URL: https://github.com/garry980318/IVS.
-          Do repozitára sme pridali účet ivskontrola. (Invitation link: https://github.com/garry980318/IVS/invitations)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-repository invitation link: https://github.com/garry980318/IVS/invitations
+          Do repozitára sme pridali účet "ivskontrola". (Invitation link: https://github.com/garry980318/IVS/invitations)
