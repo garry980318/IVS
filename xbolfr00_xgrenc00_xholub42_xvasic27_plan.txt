@@ -1,0 +1,39 @@
+    1) Termíny
+        - 16.03.2018 -
+        - 26.03.2018 -
+        - 06.04.2018 -
+        - 13.04.2018 -
+        - 16.04.2018 -
+        - 20.04.2018 -
+        - 26.04.2018 -
+        - 10.05.2018 -
+
+    2) Pridelenie úloh jednotlivým členom týmu
+        - xbolfr00 -
+        - xgrenc00 -
+        - xholub42 -
+        - xvasic27 -
+
+    3) Komunikácia a pravidlá
+
+    4) Nástroj na správu verzií, repozitár
+        - zvolený nástroj na správu verzií: GIT
+        - server: https://github.com/
+        - Náš repozitár je vlastnený vedúcim týmu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+repository invitation link: https://github.com/garry980318/IVS/invitations
