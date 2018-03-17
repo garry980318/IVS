@@ -40,14 +40,14 @@
 
         - (Ondřej Holub)     xholub42 - programová dokumentácia
                                       - user dokumentácia
-                                      - Makefile
                                       - implementácia programu "štandardnej odchýlky"
+                                      - profiling
                                       - debugging
 
         - (Michal Vašíček)   xvasic27 - interface pre "MathLibrary"
                                       - testy "MathLibrary"
                                       - implementácia "MathLibrary"
-                                      - profiling
+                                      - Makefile
 
         - spoločné úlohy              - hodnotenie členov
                                       - "skutecnost.txt"
