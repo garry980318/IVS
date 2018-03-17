@@ -9,7 +9,7 @@
                      - vytvorenie testov podľa "interface" pre "MathLibrary"
                      - implementácia "MathLibrary"
                      - vytvorenie GUI
-        - 06.04.2018 - implementácia programu pre výpočet štandardnej odchýlky
+        - 06.04.2018 - implementácia programu pre výpočet "výberovej smerodatnej odchýlky"
                      - zlinkovanie "MathLibrary" s GUI
         - 13.04.2018 - profiling
                      - debugging
@@ -40,7 +40,7 @@
 
         - (Ondřej Holub)     xholub42 - programová dokumentácia
                                       - user dokumentácia
-                                      - implementácia programu "štandardnej odchýlky"
+                                      - implementácia programu "výberovej smerodatnej odchýlky"
                                       - profiling
                                       - debugging
 
