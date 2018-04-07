@@ -1,9 +1,9 @@
-Prostredie/platforma
+Platform
 ---------
 
 Ubuntu 64bit
 
-Autori
+Authors
 ------
 
 **DedSec**
@@ -12,7 +12,7 @@ Autori
 - xholub42 Ondřej Holub
 - xvasic27 Michal Vašíček
 
-Licencia
+License
 -------
 
-Tento program je poskytovaný pod [GNU General Public License v3.0](LICENSE).
+This program is distributed under a [GNU General Public License v3.0](LICENSE).
