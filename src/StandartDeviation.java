@@ -20,7 +20,7 @@ public class StandartDeviation{
             number = input.nextDouble();
             sumOfNumbers = mathLib.Sum(sumOfNumbers, number);
             sumOfSquaredNumbers = mathLib.Sum(sumOfSquaredNumbers, mathLib.Pow(number, 2));
-            countOfNumbers++; //countOfNumbers = mathlib.Sum(countOfNumbers, 1)???
+            countOfNumbers++; //countOfNumbers = mathlib.Sum(countOfNumbers, 1) ???
         }
 
         double mean = mathLib.Div(sumOfNumbers, countOfNumbers);
