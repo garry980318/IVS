@@ -12,6 +12,9 @@ import javafx.scene.control.TextField;
 public class Controller implements Initializable {
 
     @FXML
+    private TextField operation;
+    
+    @FXML
     private TextField display;
 
     @FXML
@@ -73,6 +76,9 @@ public class Controller implements Initializable {
 
     @FXML
     private Button tobinary;
+    
+    @FXML
+    private Button negate;
 
     @FXML
     private Button equal;
@@ -84,6 +90,8 @@ public class Controller implements Initializable {
     int point = 0;
 
     Math math = new Math();
+    DecimalFormat td = new DecimalFormat("0.########");
+    DecimalFormat bintd = new DecimalFormat("#");
 
     @FXML
     void Calculation(ActionEvent event) {
@@ -137,6 +145,7 @@ public class Controller implements Initializable {
         } else if (event.getSource() == clear) {
 
             display.setText("");
+            operation.setText("");
 
             input1 = 0;
             input2 = 0;
@@ -148,6 +157,7 @@ public class Controller implements Initializable {
             input1 = Double.parseDouble(display.getText());
 
             display.setText("");
+            operation.setText("+");
             ps = 1;
             point = 0;
 
@@ -156,6 +166,7 @@ public class Controller implements Initializable {
             input1 = Double.parseDouble(display.getText());
 
             display.setText("");
+            operation.setText("-");
             ps = 2;
             point = 0;
 
@@ -164,6 +175,7 @@ public class Controller implements Initializable {
             input1 = Double.parseDouble(display.getText());
 
             display.setText("");
+            operation.setText("x");
             ps = 3;
             point = 0;
 
@@ -172,6 +184,7 @@ public class Controller implements Initializable {
             input1 = Double.parseDouble(display.getText());
 
             display.setText("");
+            operation.setText("/");
             ps = 4;
             point = 0;
 
@@ -180,6 +193,7 @@ public class Controller implements Initializable {
             input1 = 0;//Double.parseDouble(display.getText());
 
             display.setText("");
+            operation.setText("!");
             ps = 5;
             point = 0;
 
@@ -188,6 +202,7 @@ public class Controller implements Initializable {
             input1 = Double.parseDouble(display.getText());
 
             display.setText("");
+            operation.setText("pow");
             ps = 6;
             point = 0;
 
@@ -196,6 +211,7 @@ public class Controller implements Initializable {
             input1 = 0;//Double.parseDouble(display.getText());
 
             display.setText("");
+            operation.setText("sqrt");
             ps = 7;
             point = 0;
 
@@ -204,15 +220,20 @@ public class Controller implements Initializable {
             input1 = 0;//Double.parseDouble(display.getText());
 
             display.setText("");
+            operation.setText("bin");
             ps = 8;
             point = 0;
 
+        } else if (event.getSource() == negate) {
+            
+            input1 = Double.parseDouble(display.getText());
+            input1 = input1 * (-1);
+            display.setText(String.valueOf(td.format(input1)));
+            
         } else if (event.getSource() == equal && ps > 0) {
 
             input2 = Double.parseDouble(display.getText());
-
-            DecimalFormat td = new DecimalFormat("0.########");
-            DecimalFormat bintd = new DecimalFormat("#");
+            operation.setText("=");
 
             switch (ps) {
 

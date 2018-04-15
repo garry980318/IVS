@@ -18,118 +18,119 @@
       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <Button fx:id="five" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#Calculation" style="-fx-background-color: #000066;" text="5" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3">
+      <Button fx:id="five" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#Calculation" style="-fx-background-color: #000066;" styleClass="button1" text="5" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="4">
          <font>
             <Font name="Monospaced Bold" size="20.0" />
          </font>
          <GridPane.margin>
             <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
          </GridPane.margin></Button>
-      <Button fx:id="plus" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#Calculation" style="-fx-background-color: #003cb3;" text="+" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="5">
+      <Button fx:id="plus" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#Calculation" style="-fx-background-color: #003cb3;" styleClass="button1" text="+" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="6">
          <font>
             <Font name="Monospaced Bold" size="20.0" />
          </font>
          <GridPane.margin>
             <Insets bottom="2.0" left="2.0" right="4.0" top="2.0" />
          </GridPane.margin></Button>
-      <Button fx:id="dot" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#Calculation" style="-fx-background-color: #000066;" text="." textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="5">
+      <Button fx:id="dot" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#Calculation" style="-fx-background-color: #000066;" styleClass="button1" text="." textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="6">
          <font>
             <Font name="Monospaced Bold" size="20.0" />
          </font>
          <GridPane.margin>
             <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
          </GridPane.margin></Button>
-      <Button fx:id="zero" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#Calculation" style="-fx-background-color: #000066;" text="0" textFill="#f8f8f8" GridPane.columnSpan="2" GridPane.rowIndex="5">
+      <Button fx:id="zero" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#Calculation" style="-fx-background-color: #000066;" styleClass="button1" text="0" textFill="#f8f8f8" GridPane.rowIndex="6">
          <font>
             <Font name="Monospaced Bold" size="20.0" />
          </font>
          <GridPane.margin>
             <Insets bottom="2.0" left="4.0" right="2.0" top="2.0" />
          </GridPane.margin></Button>
-      <Button fx:id="minus" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#Calculation" style="-fx-background-color: #003cb3;" text="-" textFill="#fffefe" GridPane.columnIndex="3" GridPane.rowIndex="4">
+      <Button fx:id="minus" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#Calculation" style="-fx-background-color: #003cb3;" styleClass="button1" text="-" textFill="#fffefe" GridPane.columnIndex="3" GridPane.rowIndex="5">
          <font>
             <Font name="Monospaced Bold" size="20.0" />
          </font>
          <GridPane.margin>
             <Insets bottom="2.0" left="2.0" right="4.0" top="2.0" />
          </GridPane.margin></Button>
-      <Button fx:id="three" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#Calculation" style="-fx-background-color: #000066;" text="3" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="4">
+      <Button fx:id="three" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#Calculation" style="-fx-background-color: #000066;" styleClass="button1" text="3" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="5">
          <font>
             <Font name="Monospaced Bold" size="20.0" />
          </font>
          <GridPane.margin>
             <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
          </GridPane.margin></Button>
-      <Button fx:id="two" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#Calculation" style="-fx-background-color: #000066;" text="2" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="4">
+      <Button fx:id="two" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#Calculation" style="-fx-background-color: #000066;" styleClass="button1" text="2" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="5">
          <font>
             <Font name="Monospaced Bold" size="20.0" />
          </font>
          <GridPane.margin>
             <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
          </GridPane.margin></Button>
-      <Button fx:id="one" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#Calculation" style="-fx-background-color: #000066;" text="1" textFill="WHITE" GridPane.rowIndex="4">
+      <Button fx:id="one" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#Calculation" style="-fx-background-color: #000066;" styleClass="button1" text="1" textFill="WHITE" GridPane.rowIndex="5">
          <font>
             <Font name="Monospaced Bold" size="20.0" />
          </font>
          <GridPane.margin>
             <Insets bottom="2.0" left="4.0" right="2.0" top="2.0" />
          </GridPane.margin></Button>
-      <Button fx:id="four" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#Calculation" style="-fx-background-color: #000066;" text="4" textFill="WHITE" GridPane.rowIndex="3">
+      <Button fx:id="four" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#Calculation" style="-fx-background-color: #000066;" styleClass="button1" text="4" textFill="WHITE" GridPane.rowIndex="4">
          <font>
             <Font name="Monospaced Bold" size="20.0" />
          </font>
          <GridPane.margin>
             <Insets bottom="2.0" left="4.0" right="2.0" top="2.0" />
          </GridPane.margin></Button>
-      <Button fx:id="six" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#Calculation" style="-fx-background-color: #000066;" text="6" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="3">
+      <Button fx:id="six" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#Calculation" style="-fx-background-color: #000066;" styleClass="button1" text="6" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="4">
          <font>
             <Font name="Monospaced Bold" size="20.0" />
          </font>
          <GridPane.margin>
             <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
          </GridPane.margin></Button>
-      <Button fx:id="multiply" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#Calculation" style="-fx-background-color: #003cb3;" text="x" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="3">
+      <Button fx:id="multiply" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#Calculation" style="-fx-background-color: #003cb3;" styleClass="button1" text="x" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="4">
          <font>
             <Font name="Monospaced Bold" size="20.0" />
          </font>
          <GridPane.margin>
             <Insets bottom="2.0" left="2.0" right="4.0" top="2.0" />
          </GridPane.margin></Button>
-      <Button fx:id="seven" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#Calculation" style="-fx-background-color: #000066;" text="7" textFill="#fffdfd" GridPane.rowIndex="2">
+      <Button fx:id="seven" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#Calculation" style="-fx-background-color: #000066;" styleClass="button1" text="7" textFill="#fffdfd" GridPane.rowIndex="3">
          <font>
             <Font name="Monospaced Bold" size="20.0" />
          </font>
          <GridPane.margin>
             <Insets bottom="2.0" left="4.0" right="2.0" top="2.0" />
          </GridPane.margin></Button>
-      <Button fx:id="eight" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#Calculation" style="-fx-background-color: #000066;" text="8" textFill="#fffafa" GridPane.columnIndex="1" GridPane.rowIndex="2">
+      <Button fx:id="eight" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#Calculation" style="-fx-background-color: #000066;" styleClass="button1" text="8" textFill="#fffafa" GridPane.columnIndex="1" GridPane.rowIndex="3">
          <font>
             <Font name="Monospaced Bold" size="20.0" />
          </font>
          <GridPane.margin>
             <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
          </GridPane.margin></Button>
-      <Button fx:id="nine" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#Calculation" style="-fx-background-color: #000066;" text="9" textFill="#fffdfd" GridPane.columnIndex="2" GridPane.rowIndex="2">
+      <Button fx:id="nine" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#Calculation" style="-fx-background-color: #000066;" styleClass="button1" text="9" textFill="#fffdfd" GridPane.columnIndex="2" GridPane.rowIndex="3">
          <font>
             <Font name="Monospaced Bold" size="20.0" />
          </font>
          <GridPane.margin>
             <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
          </GridPane.margin></Button>
-      <Button fx:id="divide" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#Calculation" style="-fx-background-color: #003cb3;" text="/" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="2">
+      <Button fx:id="divide" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#Calculation" style="-fx-background-color: #003cb3;" styleClass="button1" text="/" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="3">
          <font>
             <Font name="Monospaced Bold" size="20.0" />
          </font>
          <GridPane.margin>
             <Insets bottom="2.0" left="2.0" right="4.0" top="2.0" />
          </GridPane.margin></Button>
-      <Button fx:id="tobinary" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#Calculation" style="-fx-background-color: #539dc6;" text="bin" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="1">
+      <Button fx:id="tobinary" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#Calculation" style="-fx-background-color: #539dc6;" styleClass="button1" text="bin" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="2">
          <font>
             <Font name="Monospaced Bold" size="20.0" />
          </font>
@@ -137,7 +138,7 @@
             <Insets bottom="2.0" left="2.0" right="4.0" top="2.0" />
          </GridPane.margin>
       </Button>
-      <Button fx:id="squareroot" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#Calculation" style="-fx-background-color: #539dc6;" text="sqrt" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
+      <Button fx:id="squareroot" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#Calculation" style="-fx-background-color: #539dc6;" styleClass="button1" text="sqrt" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="2">
          <font>
             <Font name="Monospaced Bold" size="20.0" />
          </font>
@@ -145,7 +146,7 @@
             <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
          </GridPane.margin>
       </Button>
-      <Button fx:id="power" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#Calculation" style="-fx-background-color: #539dc6;" text="pow" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+      <Button fx:id="power" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#Calculation" style="-fx-background-color: #539dc6;" styleClass="button1" text="pow" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
          <font>
             <Font name="Monospaced Bold" size="20.0" />
          </font>
@@ -153,7 +154,7 @@
             <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
          </GridPane.margin>
       </Button>
-      <Button fx:id="clear" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#Calculation" style="-fx-background-color: #539dc6;" text="AC" textFill="#ff0f0fcc" GridPane.rowIndex="1">
+      <Button fx:id="clear" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#Calculation" style="-fx-background-color: #d24e2d;" styleClass="button1" text="C" GridPane.rowIndex="2">
          <font>
             <Font name="Monospaced Bold" size="20.0" />
          </font>
@@ -161,15 +162,7 @@
             <Insets bottom="2.0" left="4.0" right="2.0" top="2.0" />
          </GridPane.margin>
       </Button>
-      <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.columnSpan="4">
-         <children>
-            <TextField fx:id="display" alignment="CENTER_RIGHT" editable="false" layoutY="-1.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #d8e9f3;" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="4.0">
-               <font>
-                  <Font name="Monospaced Bold" size="34.0" />
-               </font></TextField>
-         </children>
-      </AnchorPane>
-      <Button fx:id="equal" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#Calculation" style="-fx-background-color: #ff8000;" text="=" textFill="WHITE" GridPane.columnSpan="3" GridPane.rowIndex="6">
+      <Button fx:id="equal" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#Calculation" style="-fx-background-color: #ff8000;" styleClass="button1" text="=" textFill="WHITE" GridPane.columnSpan="3" GridPane.rowIndex="7">
          <font>
             <Font name="Monospaced Bold" size="30.0" />
          </font>
@@ -177,13 +170,35 @@
             <Insets bottom="4.0" left="4.0" right="2.0" top="2.0" />
          </GridPane.margin>
       </Button>
-      <Button fx:id="fact" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#Calculation" style="-fx-background-color: #003cb3;" text="x!" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="6">
+      <Button fx:id="fact" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#Calculation" style="-fx-background-color: #003cb3;" styleClass="button1" text="x!" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="7">
          <font>
             <Font name="Monospaced Bold" size="20.0" />
          </font>
          <GridPane.margin>
             <Insets bottom="4.0" left="2.0" right="4.0" top="2.0" />
          </GridPane.margin>
+      </Button>
+      <AnchorPane GridPane.columnSpan="4" GridPane.rowSpan="2">
+         <children>
+            <TextField fx:id="display" alignment="BOTTOM_RIGHT" editable="false" layoutX="8.0" layoutY="14.0" style="-fx-background-color: #e6f3ff;" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="4.0">
+               <font>
+                  <Font name="Monospaced Bold" size="34.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="operation" alignment="CENTER_RIGHT" editable="false" layoutX="204.0" layoutY="2.0" prefHeight="56.0" prefWidth="171.0" style="-fx-background-color: #e6f3ff;" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="4.0">
+               <font>
+                  <Font name="Monospaced Bold" size="24.0" />
+               </font>
+            </TextField>
+         </children>
+      </AnchorPane>
+      <Button fx:id="negate" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#Calculation" style="-fx-background-color: #000066;" styleClass="button1" text="+/-" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="6">
+         <GridPane.margin>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+         </GridPane.margin>
+         <font>
+            <Font name="Monospaced Bold" size="20.0" />
+         </font>
       </Button>
    </children>
    <opaqueInsets>

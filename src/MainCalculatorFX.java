@@ -13,6 +13,7 @@ public class MainCalculatorFX extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("CalcFX.fxml"));
 
         Scene scene = new Scene(root);
+        scene.getStylesheets().add("/calculatorfx/Style.css");
 
         stage.setScene(scene);
         stage.show();
