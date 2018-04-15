@@ -1,4 +1,4 @@
-package model;
+package calculatorfx;
 
 //import com.sun.org.apache.xalan.internal.xsltc.compiler.util.ErrorMsg;
 //import com.sun.swing.internal.plaf.basic.resources.basic;

@@ -1,7 +1,5 @@
-package controller;
+package calculatorfx;
 
-//import java.net.URL;
-//import java.util.ResourceBundle;
 import java.net.URL;
 import java.text.DecimalFormat;
 import java.util.ResourceBundle;
@@ -9,16 +7,12 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-//import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
-public class FXMLDocumentController implements Initializable {
+public class Controller implements Initializable {
 
     @FXML
     private TextField display;
-
-    @FXML
-    private Button zero;
 
     @FXML
     private Button one;
@@ -48,6 +42,15 @@ public class FXMLDocumentController implements Initializable {
     private Button nine;
 
     @FXML
+    private Button zero;
+
+    @FXML
+    private Button dot;
+
+    @FXML
+    private Button clear;
+
+    @FXML
     private Button plus;
 
     @FXML
@@ -60,31 +63,27 @@ public class FXMLDocumentController implements Initializable {
     private Button divide;
 
     @FXML
-    private Button bin;
+    private Button fact;
 
     @FXML
-    private Button sqrt;
+    private Button power;
 
     @FXML
-    private Button pow;
+    private Button squareroot;
 
     @FXML
-    private Button factorial;
+    private Button tobinary;
 
     @FXML
-    private Button equals;
-
-    @FXML
-    private Button comma;
-
-    @FXML
-    private Button clear;
+    private Button equal;
 
     double result = 0;
     double input1;
     double input2;
     int ps;
     int point = 0;
+
+    Math math = new Math();
 
     @FXML
     void Calculation(ActionEvent event) {
@@ -129,7 +128,7 @@ public class FXMLDocumentController implements Initializable {
 
             display.appendText("0");
 
-        } else if (event.getSource() == comma && point == 0) {
+        } else if (event.getSource() == dot && point == 0) {
 
             display.appendText(".");
 
@@ -176,34 +175,90 @@ public class FXMLDocumentController implements Initializable {
             ps = 4;
             point = 0;
 
-        } else if (event.getSource() == equals && ps > 0) {
+        } else if (event.getSource() == fact) {
+
+            input1 = 0;//Double.parseDouble(display.getText());
+
+            display.setText("");
+            ps = 5;
+            point = 0;
+
+        } else if (event.getSource() == power) {
+
+            input1 = Double.parseDouble(display.getText());
+
+            display.setText("");
+            ps = 6;
+            point = 0;
+
+        } else if (event.getSource() == squareroot) {
+
+            input1 = 0;//Double.parseDouble(display.getText());
+
+            display.setText("");
+            ps = 7;
+            point = 0;
+
+        } else if (event.getSource() == tobinary) {
+
+            input1 = 0;//Double.parseDouble(display.getText());
+
+            display.setText("");
+            ps = 8;
+            point = 0;
+
+        } else if (event.getSource() == equal && ps > 0) {
 
             input2 = Double.parseDouble(display.getText());
 
-            DecimalFormat td = new DecimalFormat("#.00");
+            DecimalFormat td = new DecimalFormat("0.########");
+            DecimalFormat bintd = new DecimalFormat("#");
 
             switch (ps) {
 
                 case 1:
-                    result = input1 + input2;
+                    result = math.Sum(input1, input2);
                     display.setText(String.valueOf(td.format(result)));
                     break;
 
                 case 2:
-                    result = input1 - input2;
+                    result = math.Sub(input1, input2);
                     display.setText(String.valueOf(td.format(result)));
                     break;
 
                 case 3:
-                    result = input1 * input2;
+                    result = math.Mult(input1, input2);
                     display.setText(String.valueOf(td.format(result)));
                     break;
 
                 case 4:
-                    result = input1 / input2;
+                    if (input2 == 0) {
+                        display.setText("ERROR");
+                    } else {
+                        result = math.Div(input1, input2);
+                        display.setText(String.valueOf(td.format(result)));
+                    }
+                    break;
+
+                case 5:
+                    result = math.Fact((long) input2);
                     display.setText(String.valueOf(td.format(result)));
                     break;
 
+                case 6:
+                    result = math.Pow(input1, input2);
+                    display.setText(String.valueOf(td.format(result)));
+                    break;
+
+                case 7:
+                    result = math.Root(input2);
+                    display.setText(String.valueOf(td.format(result)));
+                    break;
+
+                case 8:
+                    result = math.toBinary((int) input2);
+                    display.setText(String.valueOf(bintd.format(result)));
+                    break;
             }
 
             ps = 0;
@@ -213,7 +268,8 @@ public class FXMLDocumentController implements Initializable {
     }
 
     @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void initialize(URL url, ResourceBundle rb) {
+        // TODO
     }
+
 }

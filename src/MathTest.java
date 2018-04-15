@@ -1,6 +1,6 @@
 package test;
 
-import model.Math;
+import calculatorfx.Math;
 import static java.lang.Math.abs;
 import static java.lang.Math.pow;
 import static java.lang.Math.sqrt;
@@ -83,7 +83,6 @@ public class MathTest {
             double result2 = instance.Sub(n, m);
             assertEquals(v, result2, 0);
         }
-
     }
 
     /**
@@ -113,7 +112,6 @@ public class MathTest {
             double result2 = instance.Div(n, m);
             assertEquals(v, result2, 0);
         }
-
     }
 
     /**
@@ -236,7 +234,6 @@ public class MathTest {
             int result = instance.toBinary(basis);
             assertEquals(foo, result, 0);
         }
-
     }
 
     /**
@@ -258,7 +255,6 @@ public class MathTest {
             double result = instance.Abs(nonAbs);
             assertEquals(v, result, 0);
         }
-
     }
-
+    
 }

@@ -1,4 +1,4 @@
-package model;
+package calculatorfx;
 
 public interface IMath {
 
