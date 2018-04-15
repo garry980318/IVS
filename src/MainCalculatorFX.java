@@ -21,6 +21,5 @@ public class MainCalculatorFX extends Application {
 
     public static void main(String[] args) {
         launch(args);
-    }
-    
+    }  
 }

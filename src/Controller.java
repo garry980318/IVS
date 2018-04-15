@@ -13,7 +13,7 @@ public class Controller implements Initializable {
 
     @FXML
     private TextField operation;
-    
+
     @FXML
     private TextField display;
 
@@ -76,7 +76,7 @@ public class Controller implements Initializable {
 
     @FXML
     private Button tobinary;
-    
+
     @FXML
     private Button negate;
 
@@ -88,6 +88,7 @@ public class Controller implements Initializable {
     double input2;
     int ps;
     int point = 0;
+    int canneg = 0;
 
     Math math = new Math();
     DecimalFormat td = new DecimalFormat("0.########");
@@ -151,6 +152,7 @@ public class Controller implements Initializable {
             input2 = 0;
             ps = 0;
             point = 0;
+            canneg = 0;
 
         } else if (event.getSource() == plus) {
 
@@ -160,6 +162,7 @@ public class Controller implements Initializable {
             operation.setText("+");
             ps = 1;
             point = 0;
+            canneg = 1;
 
         } else if (event.getSource() == minus) {
 
@@ -169,6 +172,7 @@ public class Controller implements Initializable {
             operation.setText("-");
             ps = 2;
             point = 0;
+            canneg = 1;
 
         } else if (event.getSource() == multiply) {
 
@@ -178,6 +182,7 @@ public class Controller implements Initializable {
             operation.setText("x");
             ps = 3;
             point = 0;
+            canneg = 1;
 
         } else if (event.getSource() == divide) {
 
@@ -187,6 +192,7 @@ public class Controller implements Initializable {
             operation.setText("/");
             ps = 4;
             point = 0;
+            canneg = 1;
 
         } else if (event.getSource() == fact) {
 
@@ -196,6 +202,7 @@ public class Controller implements Initializable {
             operation.setText("!");
             ps = 5;
             point = 0;
+            canneg = 1;
 
         } else if (event.getSource() == power) {
 
@@ -205,6 +212,7 @@ public class Controller implements Initializable {
             operation.setText("pow");
             ps = 6;
             point = 0;
+            canneg = 1;
 
         } else if (event.getSource() == squareroot) {
 
@@ -214,6 +222,7 @@ public class Controller implements Initializable {
             operation.setText("sqrt");
             ps = 7;
             point = 0;
+            canneg = 1;
 
         } else if (event.getSource() == tobinary) {
 
@@ -223,13 +232,15 @@ public class Controller implements Initializable {
             operation.setText("bin");
             ps = 8;
             point = 0;
+            canneg = 1;
 
-        } else if (event.getSource() == negate) {
-            
+        } else if (event.getSource() == negate && canneg == 0) {
+
             input1 = Double.parseDouble(display.getText());
             input1 = input1 * (-1);
             display.setText(String.valueOf(td.format(input1)));
-            
+            //input1 = Double.parseDouble(display.getText());
+
         } else if (event.getSource() == equal && ps > 0) {
 
             input2 = Double.parseDouble(display.getText());
@@ -281,16 +292,13 @@ public class Controller implements Initializable {
                     display.setText(String.valueOf(bintd.format(result)));
                     break;
             }
-
             ps = 0;
-
+            canneg = 0;
         }
-
     }
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }
-
 }

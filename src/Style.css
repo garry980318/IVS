@@ -1,4 +1,4 @@
-.button1:pressed{
+.button1:pressed {
     -fx-border-color: #00001a;
     -fx-border-width: 3;
 }

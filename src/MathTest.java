@@ -42,6 +42,7 @@ public class MathTest {
     public void testSum() {
         System.out.println("Sum");
         Math instance = new Math();
+        
         for (int i = 0; i != 50; i++) {
             for (int a = -10; a != 10; a++) {
                 double num1 = a;
@@ -67,6 +68,7 @@ public class MathTest {
     public void testSub() {
         System.out.println("Sub");
         Math instance = new Math();
+        
         for (int i = 0; i != 50; i++) {
             for (int a = -10; a != 10; a++) {
                 double minuend = a;
@@ -92,6 +94,7 @@ public class MathTest {
     public void testDiv() {
         System.out.println("Div");
         Math instance = new Math();
+        
         for (int i = 1; i != 50; i++) {
             for (int a = 0; a != 10; a++) {
                 if (i == 0) {
@@ -121,6 +124,7 @@ public class MathTest {
     public void testMult() {
         System.out.println("Mult");
         Math instance = new Math();
+        
         for (int i = 1; i != 50; i++) {
             for (int a = -10; a != 10; a++) {
                 double num1 = a;
@@ -179,6 +183,7 @@ public class MathTest {
     public void testPow() {
         System.out.println("Pow");
         Math instance = new Math();
+        
         for (int i = 3; i != 20; i++) {
             for (int a = 1; a != 5; a++) {
                 double basis = i;
@@ -197,6 +202,7 @@ public class MathTest {
     public void testRoot() {
         System.out.println("Root");
         Math instance = new Math();
+        
         for (int i = 0; i != 20; i++) {
             double num = i;
             double expResult = sqrt(num);
@@ -219,6 +225,7 @@ public class MathTest {
     public void testToBinary() {
         System.out.println("toBinary");
         Math instance = new Math();
+        
         for (int i = 0; i != 20; i++) {
             int basis = i;
             String expResult = Integer.toString(basis, 2);
@@ -243,12 +250,14 @@ public class MathTest {
     public void testAbs() {
         System.out.println("Abs");
         Math instance = new Math();
+        
         for (int i = 0; i != 20; i++) {
             double nonAbs = i;
             double expResult = abs(nonAbs);
             double result = instance.Abs(nonAbs);
             assertEquals(expResult, result, 0);
         }
+        
         for (int i = 0; i != 10; i++) {
             int nonAbs = rand.nextInt((200)) * (-1);
             double v = abs(nonAbs);
@@ -256,5 +265,4 @@ public class MathTest {
             assertEquals(v, result, 0);
         }
     }
-    
 }
