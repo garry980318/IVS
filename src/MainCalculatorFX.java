@@ -14,6 +14,7 @@ public class MainCalculatorFX extends Application {
 
         Scene scene = new Scene(root);
         scene.getStylesheets().add("/calculatorfx/Style.css");
+        stage.setTitle("DedSec Calculator");
 
         stage.setScene(scene);
         stage.show();
