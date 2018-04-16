@@ -91,6 +91,7 @@ public class Controller implements Initializable {
     int ispoint = 0;
     int canneg = 0;
     int emptydisplay = 1;
+    String oldvalue;
 
     Math math = new Math();
     DecimalFormat td = new DecimalFormat("0.########");
@@ -178,7 +179,9 @@ public class Controller implements Initializable {
             input1 = Double.parseDouble(display.getText());
 
             display.setText("");
-            operation.setText("+");
+            oldvalue = String.valueOf(td.format(input1))+" + ";
+            operation.setText(oldvalue);
+            //operation.setText("+");
             ps = 1;
             point = 0;
             emptydisplay = 1;
@@ -188,7 +191,9 @@ public class Controller implements Initializable {
             input1 = Double.parseDouble(display.getText());
 
             display.setText("");
-            operation.setText("-");
+            oldvalue = String.valueOf(td.format(input1))+" - ";
+            operation.setText(oldvalue);
+            //operation.setText("-");
             ps = 2;
             point = 0;
             emptydisplay = 1;
@@ -198,7 +203,9 @@ public class Controller implements Initializable {
             input1 = Double.parseDouble(display.getText());
 
             display.setText("");
-            operation.setText("x");
+            oldvalue = String.valueOf(td.format(input1))+" x ";
+            operation.setText(oldvalue);
+            //operation.setText("x");
             ps = 3;
             point = 0;
             emptydisplay = 1;
@@ -208,7 +215,9 @@ public class Controller implements Initializable {
             input1 = Double.parseDouble(display.getText());
 
             display.setText("");
-            operation.setText("/");
+            oldvalue = String.valueOf(td.format(input1))+" / ";
+            operation.setText(oldvalue);
+            //operation.setText("/");
             ps = 4;
             point = 0;
             emptydisplay = 1;
@@ -218,7 +227,9 @@ public class Controller implements Initializable {
             input1 = 0;//Double.parseDouble(display.getText());
 
             display.setText("");
-            operation.setText("!");
+            oldvalue = "!";
+            operation.setText(oldvalue);
+            //operation.setText("!");
             ps = 5;
             point = 1;
             canneg = 1;
@@ -229,7 +240,9 @@ public class Controller implements Initializable {
             input1 = Double.parseDouble(display.getText());
 
             display.setText("");
-            operation.setText("pow");
+            oldvalue = String.valueOf(td.format(input1))+" ^ ";
+            operation.setText(oldvalue);
+            //operation.setText("pow");
             ps = 6;
             point = 1;
             canneg = 1;
@@ -240,7 +253,9 @@ public class Controller implements Initializable {
             input1 = 0;//Double.parseDouble(display.getText());
 
             display.setText("");
-            operation.setText("sqrt");
+            oldvalue = "sqrt";
+            operation.setText(oldvalue);
+            //operation.setText("sqrt");
             ps = 7;
             point = 0;
             canneg = 1;
@@ -251,7 +266,9 @@ public class Controller implements Initializable {
             input1 = 0;//Double.parseDouble(display.getText());
 
             display.setText("");
-            operation.setText("bin");
+            oldvalue = "bin";
+            operation.setText(oldvalue);
+            //operation.setText("bin");
             ps = 8;
             point = 1;
             canneg = 1;
@@ -268,7 +285,15 @@ public class Controller implements Initializable {
         } else if (event.getSource() == equal && ps > 0 && emptydisplay == 0) {
 
             input2 = Double.parseDouble(display.getText());
-            operation.setText("=");
+            if(input2 < 0 || ps == 8 || ps == 7) {
+                operation.setText(oldvalue+"("+String.valueOf(td.format(input2))+") =");
+            }
+            else {
+                operation.setText(oldvalue+String.valueOf(td.format(input2))+" =");
+            }
+            if(ps == 5) {
+                operation.setText(String.valueOf(td.format(input2))+oldvalue+" =");
+            }
 
             switch (ps) {
 
