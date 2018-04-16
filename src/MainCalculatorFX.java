@@ -7,20 +7,20 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class MainCalculatorFX extends Application {
-
+    
     @Override
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("CalcFX.fxml"));
-
+        
         Scene scene = new Scene(root);
         scene.getStylesheets().add("/calculatorfx/Style.css");
         stage.setTitle("DedSec Calculator");
-
+        
         stage.setScene(scene);
         stage.show();
     }
-
+    
     public static void main(String[] args) {
         launch(args);
-    }  
+    }    
 }

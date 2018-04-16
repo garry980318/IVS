@@ -88,11 +88,12 @@ public class Controller implements Initializable {
     double input2;
     int ps;
     int point = 0;
+    int ispoint = 0;
     int canneg = 0;
+    int emptydisplay = 1;
 
     Math math = new Math();
     DecimalFormat td = new DecimalFormat("0.########");
-    DecimalFormat bintd = new DecimalFormat("#");
 
     @FXML
     void Calculation(ActionEvent event) {
@@ -100,48 +101,64 @@ public class Controller implements Initializable {
         if (event.getSource() == one) {
 
             display.appendText("1");
+            emptydisplay = 0;
 
         } else if (event.getSource() == two) {
 
             display.appendText("2");
+            emptydisplay = 0;
 
         } else if (event.getSource() == three) {
 
             display.appendText("3");
+            emptydisplay = 0;
 
         } else if (event.getSource() == four) {
 
             display.appendText("4");
+            emptydisplay = 0;
 
         } else if (event.getSource() == five) {
 
             display.appendText("5");
+            emptydisplay = 0;
 
         } else if (event.getSource() == six) {
 
             display.appendText("6");
+            emptydisplay = 0;
 
         } else if (event.getSource() == seven) {
 
             display.appendText("7");
+            emptydisplay = 0;
 
         } else if (event.getSource() == eight) {
 
             display.appendText("8");
+            emptydisplay = 0;
 
         } else if (event.getSource() == nine) {
 
             display.appendText("9");
+            emptydisplay = 0;
 
         } else if (event.getSource() == zero) {
 
             display.appendText("0");
+            emptydisplay = 0;
 
         } else if (event.getSource() == dot && point == 0) {
 
-            display.appendText(".");
+            if (emptydisplay == 1) {
+                display.appendText("0.");
+            } else {
+                display.appendText(".");
+            }
 
             point = 1;
+            ispoint = 1;
+            emptydisplay = 0;
 
         } else if (event.getSource() == clear) {
 
@@ -152,9 +169,11 @@ public class Controller implements Initializable {
             input2 = 0;
             ps = 0;
             point = 0;
+            ispoint = 0;
             canneg = 0;
+            emptydisplay = 1;
 
-        } else if (event.getSource() == plus) {
+        } else if (event.getSource() == plus && ps == 0 && emptydisplay == 0) {
 
             input1 = Double.parseDouble(display.getText());
 
@@ -162,9 +181,9 @@ public class Controller implements Initializable {
             operation.setText("+");
             ps = 1;
             point = 0;
-            canneg = 1;
+            emptydisplay = 1;
 
-        } else if (event.getSource() == minus) {
+        } else if (event.getSource() == minus && ps == 0 && emptydisplay == 0) {
 
             input1 = Double.parseDouble(display.getText());
 
@@ -172,9 +191,9 @@ public class Controller implements Initializable {
             operation.setText("-");
             ps = 2;
             point = 0;
-            canneg = 1;
+            emptydisplay = 1;
 
-        } else if (event.getSource() == multiply) {
+        } else if (event.getSource() == multiply && ps == 0 && emptydisplay == 0) {
 
             input1 = Double.parseDouble(display.getText());
 
@@ -182,9 +201,9 @@ public class Controller implements Initializable {
             operation.setText("x");
             ps = 3;
             point = 0;
-            canneg = 1;
+            emptydisplay = 1;
 
-        } else if (event.getSource() == divide) {
+        } else if (event.getSource() == divide && ps == 0 && emptydisplay == 0) {
 
             input1 = Double.parseDouble(display.getText());
 
@@ -192,29 +211,31 @@ public class Controller implements Initializable {
             operation.setText("/");
             ps = 4;
             point = 0;
-            canneg = 1;
+            emptydisplay = 1;
 
-        } else if (event.getSource() == fact) {
+        } else if (event.getSource() == fact && ps == 0) {
 
             input1 = 0;//Double.parseDouble(display.getText());
 
             display.setText("");
             operation.setText("!");
             ps = 5;
-            point = 0;
+            point = 1;
             canneg = 1;
+            emptydisplay = 1;
 
-        } else if (event.getSource() == power) {
+        } else if (event.getSource() == power && ps == 0 && emptydisplay == 0) {
 
             input1 = Double.parseDouble(display.getText());
 
             display.setText("");
             operation.setText("pow");
             ps = 6;
-            point = 0;
+            point = 1;
             canneg = 1;
+            emptydisplay = 1;
 
-        } else if (event.getSource() == squareroot) {
+        } else if (event.getSource() == squareroot && ps == 0) {
 
             input1 = 0;//Double.parseDouble(display.getText());
 
@@ -223,25 +244,28 @@ public class Controller implements Initializable {
             ps = 7;
             point = 0;
             canneg = 1;
+            emptydisplay = 1;
 
-        } else if (event.getSource() == tobinary) {
+        } else if (event.getSource() == tobinary && ps == 0) {
 
             input1 = 0;//Double.parseDouble(display.getText());
 
             display.setText("");
             operation.setText("bin");
             ps = 8;
-            point = 0;
+            point = 1;
             canneg = 1;
+            emptydisplay = 1;
 
-        } else if (event.getSource() == negate && canneg == 0) {
+        } else if (event.getSource() == negate && canneg == 0 && emptydisplay == 0) {
 
-            input1 = Double.parseDouble(display.getText());
-            input1 = input1 * (-1);
-            display.setText(String.valueOf(td.format(input1)));
-            //input1 = Double.parseDouble(display.getText());
+            double temp = Double.parseDouble(display.getText());
+            if (temp != 0) {
+                temp = temp * (-1);
+            }
+            display.setText(String.valueOf(td.format(temp)));
 
-        } else if (event.getSource() == equal && ps > 0) {
+        } else if (event.getSource() == equal && ps > 0 && emptydisplay == 0) {
 
             input2 = Double.parseDouble(display.getText());
             operation.setText("=");
@@ -268,6 +292,9 @@ public class Controller implements Initializable {
                         display.setText("ERROR");
                     } else {
                         result = math.Div(input1, input2);
+                        if (result % 1 != 0) {
+                            ispoint = 1;
+                        }
                         display.setText(String.valueOf(td.format(result)));
                     }
                     break;
@@ -284,16 +311,25 @@ public class Controller implements Initializable {
 
                 case 7:
                     result = math.Root(input2);
+                    if (result % 1 != 0) {
+                        ispoint = 1;
+                    }
                     display.setText(String.valueOf(td.format(result)));
                     break;
 
                 case 8:
                     result = math.toBinary((int) input2);
-                    display.setText(String.valueOf(bintd.format(result)));
+                    display.setText(String.valueOf(td.format(result)));
                     break;
             }
             ps = 0;
             canneg = 0;
+
+            if (ispoint == 1) {
+                point = 1;
+            } else {
+                point = 0;
+            }
         }
     }
 

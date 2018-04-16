@@ -50,28 +50,25 @@ public class Math implements IMath {
             for (int i = 1; i != exponent; i++) {
                 basis *= x;
             }
-        } 
+        }
         return basis;
     }
 
     @Override
-    public double Root(double num
-    ) {
+    public double Root(double num) {
         double result = sqrt(num);
         return result;
     }
 
     @Override
-    public int toBinary(int basis
-    ) {
+    public int toBinary(int basis) {
         String result = Integer.toString(basis, 2);
         int foo = Integer.parseInt(result);
         return foo;
     }
 
     @Override
-    public double Abs(double nonAbs
-    ) {
+    public double Abs(double nonAbs) {
         if (nonAbs < 0) {
             nonAbs = nonAbs * (-1);
             return nonAbs;
