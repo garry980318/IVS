@@ -10,7 +10,7 @@ public class StandartDeviation{
         String line = inputLine.nextLine();
         Scanner input = new Scanner(line);
     
-        double number = 0;
+        double number;
         double sumOfNumbers = 0;
         double sumOfSquaredNumbers = 0;
         double countOfNumbers = 0;
