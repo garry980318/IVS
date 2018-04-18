@@ -1,3 +1,4 @@
+package calculatorfx;
 import java.util.Scanner;
 
 /**
@@ -7,6 +8,7 @@ import java.util.Scanner;
  * @author Ondrej Holub
  * @brief Program to calculate the SD.
  * @see Math.java, IMath.java
+ * @package calculatorfx
  */
 
 /**
