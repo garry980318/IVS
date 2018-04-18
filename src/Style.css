@@ -1,4 +1,15 @@
+/**
+ * This file contains css style for the calculator - applied when a button is pressed. It is a part of a group project for the subject IVS of Brno University of Technology. 
+ *
+ * @file Style.css
+ * @author Rene Bolf & Radoslav Grencik
+ * @brief Css style for the calculator.
+ * @package calculatorfx
+ */
+
 .button1:pressed {
     -fx-border-color: #00001a;
     -fx-border-width: 3;
 }
+
+/*** END OF FILE Style.css ***/
