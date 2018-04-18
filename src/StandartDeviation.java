@@ -1,6 +1,3 @@
-package calculatorfx;
-import java.util.Scanner;
-
 /**
  * This file contains a java implementation of a program to calculate the standart deviation (SD) using custom math library. It is a part of a group project for the subject IVS of Brno University of Technology. 
  *
@@ -10,6 +7,9 @@ import java.util.Scanner;
  * @see Math.java, IMath.java
  * @package calculatorfx
  */
+
+package calculatorfx;
+import java.util.Scanner;
 
 /**
  * @class Implementation of the SD, includes main. 
