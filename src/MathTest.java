@@ -1,3 +1,13 @@
+/**
+ * This file contains tests for the custom math library used for the calculator. Each method is tested by using it to calculate a result and then comparing the results with standart operations. It is a part of a group project for the subject IVS of Brno University of Technology. 
+ *
+ * @file MathTest.java
+ * @author Michal Vasicek
+ * @brief Test the functionality of the custom math library.
+ * @see Math.java, IMath.java
+ * @package test
+ */
+
 package test;
 
 import calculatorfx.Math;
@@ -11,6 +21,11 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import java.util.Random;
+
+/**
+ * @class Class containing the tests.
+ * @post Custom math library is tested whether it works as desired or not.
+ */
 
 public class MathTest {
 
@@ -36,7 +51,10 @@ public class MathTest {
     }
 
     /**
-     * Test of Sum method, of class Math.
+     * Testing Sum method by comparing its results to results of the standart operation "+" using random input numbers.
+     *
+     * @brief Test of Sum method.
+     * @post Method Sum produced the same results as operation "+" (or not)
      */
     @Test
     public void testSum() {
@@ -62,7 +80,10 @@ public class MathTest {
     }
 
     /**
-     * Test of Sub method, of class Math.
+     * Testing Sub method by comparing its results to results of the standart operation "-" using random input numbers.
+     *
+     * @brief Test of Sub method.
+     * @post Method Sub produced the same results as operation "-" (or not)
      */
     @Test
     public void testSub() {
@@ -88,7 +109,10 @@ public class MathTest {
     }
 
     /**
-     * Test of Div method, of class Math.
+     * Testing Div method by comparing its results to results of the standart operation "/" using random input numbers.
+     *
+     * @brief Test of Div method.
+     * @post Method div produced the same results as operation "/" (or not)
      */
     @Test
     public void testDiv() {
@@ -118,7 +142,10 @@ public class MathTest {
     }
 
     /**
-     * Test of Mult method, of class Math.
+     * Testing Mult method by comparing its results to results of the standart operation "*" using random input numbers.
+     *
+     * @brief Test of Mult method.
+     * @post Method Mult produced the same results as operation "*" (or not)
      */
     @Test
     public void testMult() {
@@ -145,7 +172,10 @@ public class MathTest {
     }
 
     /**
-     * Test of Fact method, of class Math.
+     * Testing Fact method by comparing its results to expected results.
+     *
+     * @brief Test of Fact method.
+     * @post Method Fact produced the expected results (or not)
      */
     @Test
     public void testFact() {
@@ -176,8 +206,12 @@ public class MathTest {
         // TODO review the generated test code and remove the default call to fail.
     }
 
-    /**
-     * Test of Pow method, of class Math.
+    
+   /**
+     * Testing Pow method by comparing its results to results of the standart method "pow" using random input numbers.
+     *
+     * @brief Test of Pow method.
+     * @post Method Pow produced the same results as method "pow" (or not)
      */
     @Test
     public void testPow() {
@@ -196,7 +230,10 @@ public class MathTest {
     }
 
     /**
-     * Test of Root method, of class Math.
+     * Testing Root method by comparing its results to results of the standart method "sqrt" using random input numbers.
+     *
+     * @brief Test of Root method.
+     * @post Method Root produced the same results as method "sqrt" (or not)
      */
     @Test
     public void testRoot() {
@@ -219,7 +256,10 @@ public class MathTest {
     }
 
     /**
-     * Test of toBinary method, of class Math.
+     * Testing ToBinary method by comparing its results to results of the standart methods "toString" and "parseInt" using random input numbers.
+     *
+     * @brief Test of ToBinary method.
+     * @post Method ToBinary produced the same results as methods "toString" and "parseInt" (or not)
      */
     @Test
     public void testToBinary() {
@@ -244,7 +284,10 @@ public class MathTest {
     }
 
     /**
-     * Test of Abs method, of class Math.
+     * Testing Abs method by comparing its results to results of the standart method "abs"using random negative input numbers.
+     *
+     * @brief Test of Abs method.
+     * @post Method Abs produced the same results as method "abs" (or not)
      */
     @Test
     public void testAbs() {
