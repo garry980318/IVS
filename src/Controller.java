@@ -179,7 +179,7 @@ public class Controller implements Initializable {
             input1 = Double.parseDouble(display.getText());
 
             display.setText("");
-            oldvalue = String.valueOf(td.format(input1))+" + ";
+            oldvalue = String.valueOf(td.format(input1)) + " + ";
             operation.setText(oldvalue);
             //operation.setText("+");
             ps = 1;
@@ -191,7 +191,7 @@ public class Controller implements Initializable {
             input1 = Double.parseDouble(display.getText());
 
             display.setText("");
-            oldvalue = String.valueOf(td.format(input1))+" - ";
+            oldvalue = String.valueOf(td.format(input1)) + " - ";
             operation.setText(oldvalue);
             //operation.setText("-");
             ps = 2;
@@ -203,7 +203,7 @@ public class Controller implements Initializable {
             input1 = Double.parseDouble(display.getText());
 
             display.setText("");
-            oldvalue = String.valueOf(td.format(input1))+" x ";
+            oldvalue = String.valueOf(td.format(input1)) + " x ";
             operation.setText(oldvalue);
             //operation.setText("x");
             ps = 3;
@@ -215,7 +215,7 @@ public class Controller implements Initializable {
             input1 = Double.parseDouble(display.getText());
 
             display.setText("");
-            oldvalue = String.valueOf(td.format(input1))+" / ";
+            oldvalue = String.valueOf(td.format(input1)) + " / ";
             operation.setText(oldvalue);
             //operation.setText("/");
             ps = 4;
@@ -240,7 +240,7 @@ public class Controller implements Initializable {
             input1 = Double.parseDouble(display.getText());
 
             display.setText("");
-            oldvalue = String.valueOf(td.format(input1))+" ^ ";
+            oldvalue = String.valueOf(td.format(input1)) + " ^ ";
             operation.setText(oldvalue);
             //operation.setText("pow");
             ps = 6;
@@ -253,7 +253,7 @@ public class Controller implements Initializable {
             input1 = 0;//Double.parseDouble(display.getText());
 
             display.setText("");
-            oldvalue = "sqrt";
+            oldvalue = "sqrt(";
             operation.setText(oldvalue);
             //operation.setText("sqrt");
             ps = 7;
@@ -266,7 +266,7 @@ public class Controller implements Initializable {
             input1 = 0;//Double.parseDouble(display.getText());
 
             display.setText("");
-            oldvalue = "bin";
+            oldvalue = "bin(";
             operation.setText(oldvalue);
             //operation.setText("bin");
             ps = 8;
@@ -285,14 +285,14 @@ public class Controller implements Initializable {
         } else if (event.getSource() == equal && ps > 0 && emptydisplay == 0) {
 
             input2 = Double.parseDouble(display.getText());
-            if(input2 < 0 || ps == 8 || ps == 7) {
-                operation.setText(oldvalue+"("+String.valueOf(td.format(input2))+") =");
-            }
-            else {
-                operation.setText(oldvalue+String.valueOf(td.format(input2))+" =");
-            }
-            if(ps == 5) {
-                operation.setText(String.valueOf(td.format(input2))+oldvalue+" =");
+            if (input2 < 0) {
+                operation.setText(oldvalue + "(" + String.valueOf(td.format(input2)) + ") =");
+            } else if (ps == 7 || ps == 8) {
+                operation.setText(oldvalue + String.valueOf(td.format(input2)) + ") =");
+            } else if (ps == 5) {
+                operation.setText(String.valueOf(td.format(input2)) + oldvalue + " =");
+            } else {
+                operation.setText(oldvalue + String.valueOf(td.format(input2)) + " =");
             }
 
             switch (ps) {
