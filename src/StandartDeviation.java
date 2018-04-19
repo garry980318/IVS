@@ -35,7 +35,7 @@ public class StandartDeviation{
             number = input.nextDouble();
             sumOfNumbers = mathLib.Sum(sumOfNumbers, number);
             sumOfSquaredNumbers = mathLib.Sum(sumOfSquaredNumbers, mathLib.Pow(number, 2));
-            countOfNumbers = mathlib.Sum(countOfNumbers, 1); //==countOfNumbers++ (but using the custom math library)
+            countOfNumbers = mathLib.Sum(countOfNumbers, 1); //==countOfNumbers++ (but using the custom math library)
         }
 
         double mean = mathLib.Div(sumOfNumbers, countOfNumbers); /**< Mean of all inputted numbers */
