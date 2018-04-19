@@ -1,5 +1,5 @@
 /**
- * This file contains a java implementation of a Controller for a java FXML application. It is a part of a group project for the subject IVS of Brno University of Technology.
+ * This file contains a java implementation of a Controller for a java FXML application. It is a part of a group project for the subject IVS of Brno University of Technology. 
  *
  * @file Controller.java
  * @author Rene Bolf & Radoslav Grencik
@@ -107,7 +107,7 @@ public class Controller implements Initializable {
     DecimalFormat ed = new DecimalFormat("0.########E0"); /**< Format for scientific notation of a number */
 
     /**
-     * Method getDigits counts the digits in number (decimal dot and minus included).
+     * Method getDigits counts the digits in number (decimal dot and minus included). 
      *
      * @brief Method getDigits
      * @param num method counts the digits in this number
@@ -115,7 +115,7 @@ public class Controller implements Initializable {
      */
     public int getDigits(double num) {
 
-        if (num == 0) {
+        if (num == 0) { 
             return 1;
         }
 
@@ -123,7 +123,7 @@ public class Controller implements Initializable {
 
         if (num < 0) { /**< Number includes a minus */
             num = num * (-1);
-            ct++;
+            ct++; 
         }
 
         long integer = (long) num;
@@ -155,7 +155,7 @@ public class Controller implements Initializable {
     }
 
     /**
-     * Method displayResult displays the result of mathematical operation onto display in decimal or scientific notation.
+     * Method displayResult displays the result of mathematical operation onto display in decimal or scientific notation. 
      *
      * @brief Method displayResult
      * @param result is the number to be displayed in normal or scientific notation

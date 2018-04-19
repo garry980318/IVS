@@ -20,7 +20,7 @@ public class MainCalculatorFX extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         
-        Parent root = FXMLLoader.load(getClass().getResource("CalcFX.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/CalcFX.fxml"));
         Scene scene = new Scene(root);
         scene.getStylesheets().add("/styles/Style.css"); /**< Added custom css styling */
         stage.setTitle("DedSec Calculator"); /**< Added title */

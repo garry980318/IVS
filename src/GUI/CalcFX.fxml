@@ -175,6 +175,11 @@
                   <Font name="Monospaced Bold" size="18.0" />
                </font>
             </TextField>
+            <Button alignment="TOP_LEFT" layoutX="351.0" layoutY="3.0" mnemonicParsing="false" prefHeight="5.0" prefWidth="24.0" style="-fx-background-color: #00001a;" styleClass="button1" text="i" textFill="#e6f3ff" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
+               <font>
+                  <Font name="Monospaced Bold" size="12.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
       <Button fx:id="negate" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#Calculation" style="-fx-background-color: #000066;" styleClass="button1" text="+/-" textFill="WHITE" GridPane.rowIndex="6">
