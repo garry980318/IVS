@@ -232,7 +232,7 @@ public class Controller implements Initializable {
             input1 = Double.parseDouble(display.getText());
 
             display.setText("");
-            oldvalue = String.valueOf(td.format(input1)) + " + ";
+            oldvalue = String.valueOf(td.format(input1)) + "+";
             operation.setText(oldvalue);
             ps = 1;
             point = 0;
@@ -243,7 +243,7 @@ public class Controller implements Initializable {
             input1 = Double.parseDouble(display.getText());
 
             display.setText("");
-            oldvalue = String.valueOf(td.format(input1)) + " - ";
+            oldvalue = String.valueOf(td.format(input1)) + "-";
             operation.setText(oldvalue);
             ps = 2;
             point = 0;
@@ -254,7 +254,7 @@ public class Controller implements Initializable {
             input1 = Double.parseDouble(display.getText());
 
             display.setText("");
-            oldvalue = String.valueOf(td.format(input1)) + " x ";
+            oldvalue = String.valueOf(td.format(input1)) + "x";
             operation.setText(oldvalue);
             ps = 3;
             point = 0;
@@ -265,7 +265,7 @@ public class Controller implements Initializable {
             input1 = Double.parseDouble(display.getText());
 
             display.setText("");
-            oldvalue = String.valueOf(td.format(input1)) + " / ";
+            oldvalue = String.valueOf(td.format(input1)) + "/";
             operation.setText(oldvalue);
             ps = 4;
             point = 0;
@@ -288,7 +288,7 @@ public class Controller implements Initializable {
             input1 = Double.parseDouble(display.getText());
 
             display.setText("");
-            oldvalue = String.valueOf(td.format(input1)) + " ^ ";
+            oldvalue = String.valueOf(td.format(input1)) + "^";
             operation.setText(oldvalue);
             ps = 6;
             point = 1;
@@ -332,13 +332,13 @@ public class Controller implements Initializable {
             input2 = Double.parseDouble(display.getText());
 
             if (input2 < 0) {
-                operation.setText(oldvalue + "(" + String.valueOf(td.format(input2)) + ") =");
+                operation.setText(oldvalue + "(" + String.valueOf(td.format(input2)) + ")=");
             } else if (ps == 7 || ps == 8) {
-                operation.setText(oldvalue + String.valueOf(td.format(input2)) + ") =");
+                operation.setText(oldvalue + String.valueOf(td.format(input2)) + ")=");
             } else if (ps == 5) {
-                operation.setText(String.valueOf(td.format(input2)) + oldvalue + " =");
+                operation.setText(String.valueOf(td.format(input2)) + oldvalue + "=");
             } else {
-                operation.setText(oldvalue + String.valueOf(td.format(input2)) + " =");
+                operation.setText(oldvalue + String.valueOf(td.format(input2)) + "=");
             }
 
             switch (ps) {
