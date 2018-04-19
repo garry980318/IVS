@@ -18,5 +18,5 @@ public interface IMath {
 
     double Abs(double nonAbs);
 
-    int toBinary(int basis);
+    long toBinary(long basis);
 }

@@ -7,7 +7,6 @@
  * @see Math.java, IMath.java
  * @package test
  */
-
 package test;
 
 import calculatorfx.Math;
@@ -26,7 +25,6 @@ import java.util.Random;
  * @class Class containing the tests.
  * @post Custom math library is tested whether it works as desired or not.
  */
-
 public class MathTest {
 
     Random rand = new Random();
@@ -206,8 +204,7 @@ public class MathTest {
         // TODO review the generated test code and remove the default call to fail.
     }
 
-    
-   /**
+    /**
      * Testing Pow method by comparing its results to results of the standart method "pow" using random input numbers.
      *
      * @brief Test of Pow method.
@@ -267,18 +264,18 @@ public class MathTest {
         Math instance = new Math();
 
         for (int i = 0; i != 20; i++) {
-            int basis = i;
-            String expResult = Integer.toString(basis, 2);
-            int foo = Integer.parseInt(expResult);
-            int result = instance.toBinary(basis);
+            long basis = i;
+            String expResult = Long.toString(basis, 2);
+            long foo = Long.parseLong(expResult);
+            long result = instance.toBinary(basis);
             assertEquals(foo, result, 0);
         }
 
         for (int i = 0; i != 10; i++) {
-            int basis = rand.nextInt(200);
-            String expResult = Integer.toString(basis, 2);
-            int foo = Integer.parseInt(expResult);
-            int result = instance.toBinary(basis);
+            long basis = rand.nextInt(200);
+            String expResult = Long.toString(basis, 2);
+            long foo = Long.parseLong(expResult);
+            long result = instance.toBinary(basis);
             assertEquals(foo, result, 0);
         }
     }

@@ -1,5 +1,5 @@
 /**
- * This file contains a java implementation of a program to calculate the standart deviation (SD) using custom math library. It is a part of a group project for the subject IVS of Brno University of Technology. 
+ * This file contains a java implementation of a program to calculate the standart deviation (SD) using custom math library. It is a part of a group project for the subject IVS of Brno University of Technology.
  *
  * @file StandartDeviation.java
  * @author Ondrej Holub
@@ -7,12 +7,12 @@
  * @see Math.java, IMath.java
  * @package calculatorfx
  */
-
 package calculatorfx;
+
 import java.util.Scanner;
 
 /**
- * @class Implementation of the SD, includes main. 
+ * @class Implementation of the SD, includes main.
  * @pre The data, out of which the SD is to be calculated, need to be available on the standart input after the program is executed.
  * @post SD is printed to the standart output.
  */
@@ -21,16 +21,15 @@ public class StandartDeviation{
     public static void main(String[] args) {
 
         IMath mathLib = new Math(); /**< Import of the math library */
-    
+
         Scanner inputLine = new Scanner(System.in);
         String line = inputLine.nextLine(); /**< Read one line from the standart output */
         Scanner input = new Scanner(line);
-    
+
         double number; /**< Number currently read from the standart output */
         double sumOfNumbers = 0; /**< Sum of all inputted numbers (a+b+...)*/
         double sumOfSquaredNumbers = 0; /**< Sum of all inputted numbers squared (a^2+b^2+...) */
         double countOfNumbers = 0; /**< The number of numbers (N)*/
-
 
         while(input.hasNextDouble()){
             number = input.nextDouble();

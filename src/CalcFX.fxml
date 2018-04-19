@@ -165,12 +165,12 @@
       </Button>
       <AnchorPane GridPane.columnSpan="4" GridPane.rowSpan="2">
          <children>
-            <TextField fx:id="display" alignment="BOTTOM_RIGHT" editable="false" layoutX="8.0" layoutY="14.0" style="-fx-background-color: #e6f3ff;" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="4.0">
+            <TextField fx:id="display" alignment="BOTTOM_RIGHT" editable="false" layoutX="8.0" layoutY="14.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #e6f3ff;" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="4.0">
                <font>
                   <Font name="Monospaced Bold" size="34.0" />
                </font>
             </TextField>
-            <TextField fx:id="operation" alignment="CENTER_RIGHT" editable="false" layoutX="204.0" layoutY="2.0" prefHeight="56.0" prefWidth="369.0" style="-fx-background-color: #e6f3ff;" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="4.0">
+            <TextField fx:id="operation" alignment="CENTER_RIGHT" editable="false" layoutX="204.0" layoutY="2.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #e6f3ff;" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="4.0">
                <font>
                   <Font name="Monospaced Bold" size="24.0" />
                </font>

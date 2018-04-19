@@ -6,7 +6,6 @@
  * @brief Implementation of a custom math library.
  * @package calculatorfx
  */
-
 package calculatorfx;
 
 import static java.lang.Math.sqrt;
@@ -15,9 +14,8 @@ import static java.lang.Math.sqrt;
  * @class Class containing the methods of the math library.
  * @see MathTest.java where the functionality is tested.
  */
-
 public class Math implements IMath {
-    
+
     /**
      * Method Sum produces a sum of two numbers 
      *
@@ -26,7 +24,6 @@ public class Math implements IMath {
      * @param num2 is the second number to be added
      * @return sum of num1 and num2
      */
-
     @Override
     public double Sum(double num1, double num2) {
         double result = num1 + num2;
@@ -41,7 +38,6 @@ public class Math implements IMath {
      * @param subtrahend is the number to be subtracted
      * @return difference between minuend and subtrahend
      */
-
     @Override
     public double Sub(double minuend, double subtrahend) {
         double result = minuend - subtrahend;
@@ -57,7 +53,6 @@ public class Math implements IMath {
      * @warning exception thrown when divisor is 0
      * @return division of divident and divisor
      */
-    
     @Override
     public double Div(double divident, double divisor) {
         assert (divisor != 0);
@@ -73,13 +68,12 @@ public class Math implements IMath {
      * @param num2 is the second number to be multiplied
      * @return product of num1 and num2
      */
-    
     @Override
     public double Mult(double num1, double num2) {
         double result = num1 * num2;
         return result;
     }
-
+    
     /**
      * Method Fact produces a factorial of a number 
      *
@@ -87,7 +81,6 @@ public class Math implements IMath {
      * @param num is the  number to be factorised
      * @return factorial of num
      */
-    
     @Override
     public long Fact(long num) {
         long x = num;
@@ -98,7 +91,7 @@ public class Math implements IMath {
         }
         return result;
     }
-    
+
     /**
      * Method Pow produces an exponentiation of a number 
      *
@@ -107,10 +100,10 @@ public class Math implements IMath {
      * @param exponent is the exponent
      * @return basis to the power of the exponent
      */
-
     @Override
     public double Pow(double basis, double exponent) {
 
+        assert (exponent < 0);
         if (exponent == 0) {
             return 1;
         } else {
@@ -122,7 +115,6 @@ public class Math implements IMath {
         return basis;
     }
     
-    
     /**
      * Method Root produces a square root of a number 
      *
@@ -130,14 +122,12 @@ public class Math implements IMath {
      * @param num is the basis
      * @return square root of num
      */
-
     @Override
     public double Root(double num) {
         double result = sqrt(num);
         return result;
     }
-    
-    
+
     /**
      * Method toBinary converts a number to binary 
      *
@@ -145,14 +135,13 @@ public class Math implements IMath {
      * @param basis is the number to be converted
      * @return basis written in binary
      */
-
     @Override
-    public int toBinary(int basis) {
-        String result = Integer.toString(basis, 2);
-        int foo = Integer.parseInt(result);
+    public long toBinary(long basis) {
+        String result = Long.toString(basis, 2);
+        long foo = Long.parseLong(result);
         return foo;
     }
-
+    
     /**
      * Method Abs converts a number to its absolute value 
      *
@@ -160,7 +149,6 @@ public class Math implements IMath {
      * @param nonAbs is the number to be converted
      * @return absolute value of nonAbs
      */
-    
     @Override
     public double Abs(double nonAbs) {
         if (nonAbs < 0) {
