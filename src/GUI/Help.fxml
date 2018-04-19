@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="473.0" prefWidth="404.0" style="-fx-background-color: #00001a;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="calculatorfx.Controller">
+   <children>
+      <TextArea editable="false" prefHeight="400.0" prefWidth="308.0" style="-fx-background-color: #000000;" text="##################### HELP #################### &#10;&#10;- FACTORIAL -&#10;*************&#10;* press ! &#10;* type natural number from interval &lt;0, 20&gt; &#10;* press =&#10;&#10;- POWER -&#10;*********&#10;* type any rational number &#10;* press xʸ&#10;* type any natural number &#10;* press = &#10;&#10;- SQUARE ROOT -&#10;***************&#10;* press √x&#10;* type any natural number&#10;* press =&#10;&#10;- DECIMAL TO BINARY -&#10;*********************&#10;* press x₁₀➜x₂&#10;* type natural number from interval &lt;0, 262144&gt;&#10;* press =&#10;&#10;################################################" wrapText="true" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="4.0">
+         <font>
+            <Font name="Monospaced Bold" size="13.0" />
+         </font>
+      </TextArea>
+   </children>
+</AnchorPane>
