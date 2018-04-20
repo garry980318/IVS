@@ -192,7 +192,7 @@ public class Controller implements Initializable {
     }
     
     @FXML
-    void Calculation(ActionEvent event) {
+    void Calculation(ActionEvent event) throws Exception {
 
         if (event.getSource() == one) {
 
@@ -337,16 +337,34 @@ public class Controller implements Initializable {
             canneg = 1;
             emptydisplay = 1;
 
-        } else if (event.getSource() == squareroot && ps == 0) {
+        } else if (event.getSource() == squareroot && ps == 0 && emptydisplay == 0) {
 
-            input1 = 0;
+            input1 = Double.parseDouble(display.getText());
+            if (input1 < 0) {
+                input1 = input1 * (-1);
+            }
+            if (input1 % 1 != 0) {
+                input1 = input1 - (input1 % 1);
+            }
 
             display.setText("");
-            oldvalue = "sqrt(";
+            if (input1 == 1) {
+                oldvalue = String.valueOf(td.format(input1)) + "st root of ";
+            } else if (input1 == 2) {
+                oldvalue = String.valueOf(td.format(input1)) + "nd root of ";
+            } else if (input1 == 3) {
+                oldvalue = String.valueOf(td.format(input1)) + "rd root of ";
+            } else {
+                oldvalue = String.valueOf(td.format(input1)) + "th root of ";
+            }
             operation.setText(oldvalue);
             ps = 7;
             point = 0;
-            canneg = 1;
+            if (input1 % 2 == 0) {
+                canneg = 1;
+            } else {
+                canneg = 0;
+            }
             emptydisplay = 1;
 
         } else if (event.getSource() == tobinary && ps == 0) {
@@ -375,7 +393,7 @@ public class Controller implements Initializable {
 
             if (input2 < 0) {
                 operation.setText(oldvalue + "(" + String.valueOf(td.format(input2)) + ")=");
-            } else if (ps == 7 || ps == 8) {
+            } else if (ps == 8) {
                 operation.setText(oldvalue + String.valueOf(td.format(input2)) + ")=");
             } else if (ps == 5) {
                 operation.setText(String.valueOf(td.format(input2)) + oldvalue + "=");
@@ -437,11 +455,17 @@ public class Controller implements Initializable {
                     break;
 
                 case 7:
-                    result = math.Root(input2);
-                    if (result % 1 != 0) {
-                        ispoint = 1;
+                    if (input1 < 1) {
+                        display.setText("");
+                        operation.setText("ERROR");
+                        emptydisplay = 1;
+                    } else {
+                        result = math.Root(input1, input2);
+                        if (result % 1 != 0) {
+                            ispoint = 1;
+                        }
+                        displayResult(result);
                     }
-                    displayResult(result);
                     break;
 
                 case 8:
