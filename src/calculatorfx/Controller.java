@@ -104,7 +104,7 @@ public class Controller implements Initializable {
     int canneg = 0; /**< Flag which enables the negate operation (0 when enabled) */
     int emptydisplay = 1; /**< Flag which indicates that a display is empty (1 when display is empty) */
 
-    String oldvalue; /** < This String is used to store info about operation and input number. These are than displayed onto operation display. */
+    String oldvalue; /**< This String is used to store info about operation and input number. These are than displayed onto operation display. */
 
     Math math = new Math();
     DecimalFormat td = new DecimalFormat("0.########"); /**< Format for decimal notation of a number */
