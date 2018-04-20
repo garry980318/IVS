@@ -12,6 +12,7 @@ package test;
 import calculatorfx.Math;
 import static java.lang.Math.abs;
 import static java.lang.Math.pow;
+import static java.lang.Math.round;
 import static java.lang.Math.sqrt;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -20,6 +21,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import java.util.Random;
+import static org.junit.Assume.assumeNoException;
 
 /**
  * @class Class containing the tests.
@@ -97,6 +99,7 @@ public class MathTest {
                 assertEquals(expResult, result, 0);
             }
         }
+        
         for (int i = 0; i == 10; i++) {
             double n = rand.nextInt((20) * (1));
             double m = rand.nextInt(50) - 1;
@@ -111,14 +114,14 @@ public class MathTest {
      *
      * @brief Test of Div method.
      * @post Method div produced the same results as operation "/" (or not)
+     * @throws java.lang.Exception
      */
     @Test
-    public void testDiv() {
+    public void testDiv() throws Exception {
         System.out.println("Div");
         Math instance = new Math();
-
         for (int i = 1; i != 50; i++) {
-            for (int a = 0; a != 10; a++) {
+            for (int a = -5; a != 10; a++) {
                 if (i == 0) {
                     a++;
                 }
@@ -130,12 +133,18 @@ public class MathTest {
             }
         }
 
-        for (int i = 0; i != 10; i++) {
-            double n = rand.nextInt((20) + (1));
-            double m = rand.nextInt(50) + 1;
-            double v = n / m;
-            double result2 = instance.Div(n, m);
-            assertEquals(v, result2, 0);
+        try {
+            for (int i = 0; i != 10; i++) {
+                double n = rand.nextInt((20) + (1));
+                double m = rand.nextInt(50) + 1;
+                double v = n / m;
+                double result2 = instance.Div(n, m);
+                assertEquals(v, result2, 0);
+            }
+            instance.Div(5, 0);
+        } catch (Exception e) {
+
+            assumeNoException(e);
         }
     }
 
@@ -174,34 +183,31 @@ public class MathTest {
      *
      * @brief Test of Fact method.
      * @post Method Fact produced the expected results (or not)
+     * @throws java.lang.Exception
      */
     @Test
-    public void testFact() {
+    public void testFact() throws Exception {
         System.out.println("Fact");
         Math instance = new Math();
-        long num = 1L;
-        long num2 = 2L;
         long num3 = 3L;
         long num4 = 4L;
         long num5 = 5L;
-
-        long expResult = 1L;
-        long expResult2 = 2L;
+        long num6 = -2L;
         long expResult3 = 6L;
         long expResult4 = 24L;
         long expResult5 = 120L;
-
-        long result = instance.Fact(num);
-        assertEquals(expResult, result, 0);
-        long result2 = instance.Fact(num2);
-        assertEquals(expResult2, result2, 0);
         long result3 = instance.Fact(num3);
         assertEquals(expResult3, result3, 0);
         long result4 = instance.Fact(num4);
         assertEquals(expResult4, result4, 0);
         long result5 = instance.Fact(num5);
         assertEquals(expResult5, result5, 0);
-        // TODO review the generated test code and remove the default call to fail.
+
+        try {
+            instance.Fact(num6);
+        } catch (Exception e) {
+            assumeNoException(e);
+        }
     }
 
     /**
@@ -209,20 +215,26 @@ public class MathTest {
      *
      * @brief Test of Pow method.
      * @post Method Pow produced the same results as method "pow" (or not)
+     * @throws java.lang.Exception
      */
     @Test
-    public void testPow() {
+    public void testPow() throws Exception {
         System.out.println("Pow");
         Math instance = new Math();
 
         for (int i = 3; i != 20; i++) {
-            for (int a = 1; a != 5; a++) {
+            for (int a = 0; a != 5; a++) {
                 double basis = i;
                 double exponent = a;
                 double expResult = pow(i, a);
                 double result = instance.Pow(basis, exponent);
                 assertEquals(expResult, result, 0);
             }
+        }
+        try {
+            instance.Pow(-2, -2);
+        } catch (Exception e) {
+            assumeNoException(e);
         }
     }
 
@@ -231,24 +243,37 @@ public class MathTest {
      *
      * @brief Test of Root method.
      * @post Method Root produced the same results as method "sqrt" (or not)
+     * @throws java.lang.Exception
      */
     @Test
-    public void testRoot() {
+    public void testRoot() throws Exception {
         System.out.println("Root");
         Math instance = new Math();
 
-        for (int i = 0; i != 20; i++) {
-            double num = i;
-            double expResult = sqrt(num);
-            double result = instance.Root(num);
-            assertEquals(expResult, result, 0);
+        for (int i = 81; i != 82; i++) {
+            for (int a = 3; a != 5; a++) {
+
+                double basis = i;
+                double exponent = a + 1;
+                double result = instance.Root(exponent, basis);
+                double expResult = basis;
+                while (exponent != 2) {
+                    expResult = sqrt(expResult);
+                    exponent--;
+                }
+                assertEquals(round(expResult), round(result), 0);
+            }
         }
 
-        for (int i = 0; i != 10; i++) {
-            int num = rand.nextInt((200));
-            double v = sqrt(num);
-            double result = instance.Root(num);
-            assertEquals(v, result, 0);
+        try {
+            instance.Root(0, 2);
+        } catch (Exception e) {
+            assumeNoException(e);
+        }
+        try {
+            instance.Root(2, 0);
+        } catch (Exception e) {
+            assumeNoException(e);
         }
     }
 
@@ -262,7 +287,6 @@ public class MathTest {
     public void testToBinary() {
         System.out.println("toBinary");
         Math instance = new Math();
-
         for (int i = 0; i != 20; i++) {
             long basis = i;
             String expResult = Long.toString(basis, 2);
@@ -281,7 +305,8 @@ public class MathTest {
     }
 
     /**
-     * Testing Abs method by comparing its results to results of the standart method "abs"using random negative input numbers.
+     * Testing Abs method by comparing its results to results of the standart
+     * method "abs"using random negative input numbers.
      *
      * @brief Test of Abs method.
      * @post Method Abs produced the same results as method "abs" (or not)
