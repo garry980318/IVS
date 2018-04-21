@@ -1,6 +1,7 @@
-Platform
+Platforms
 ---------
 
+Windows 64bit
 Ubuntu 64bit
 
 Authors
