@@ -1,5 +1,5 @@
 /**
- * This file contains a java implementation of a main class for a java FXML application. It is a part of a group project for the subject IVS of Brno University of Technology.
+ * This file contains a java implementation of a main class for a java FXML application. It is a part of a group project for the subject IVS of Brno University of Technology. 
  *
  * @file MainCalculatorFX.java
  * @author Rene Bolf & Radoslav Grencik
@@ -19,24 +19,24 @@ import javafx.stage.Stage;
  * @class Main class of the calculator launching the application
  */
 public class MainCalculatorFX extends Application {
-
+    
     @Override
     public void start(Stage stage) throws Exception {
-
+        
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/CalcFX.fxml"));
         Scene scene = new Scene(root);
         scene.getStylesheets().add("/styles/Style.css"); /**< Added custom css styling */
         stage.setTitle("DedSec Calculator"); /**< Added title */
         Image image = new Image("/icons/icon.png"); /**< Added custom icon */
-        stage.getIcons().add(image);
+        stage.getIcons().add(image);        
         stage.setScene(scene);
         stage.show();
-
     }
-
+    
     public static void main(String[] args) {
+        
         launch(args);
-    }
+    }    
 }
 
 /*** END OF FILE MainCalculatorFX.java ***/

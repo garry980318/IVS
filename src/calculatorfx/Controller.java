@@ -19,6 +19,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 public class Controller implements Initializable {
@@ -155,7 +156,6 @@ public class Controller implements Initializable {
         }
 
         return ct;
-
     }
 
     /**
@@ -172,7 +172,6 @@ public class Controller implements Initializable {
         } else { /**< Number contains less or equal to 16 digits and is displayed in normal notation */
             display.setText(String.valueOf(td.format(result)));
         }
-
     }
 
     @FXML
@@ -182,13 +181,14 @@ public class Controller implements Initializable {
             Parent root = FXMLLoader.load(getClass().getResource("/GUI/Help.fxml"));
             Stage stage = new Stage();
             stage.setTitle("HELP");
+            Image image = new Image("/icons/icon.png");
+            stage.getIcons().add(image);      
             stage.setScene(new Scene(root));
             stage.showAndWait();
 
         } catch (Exception e) {
             System.err.println("Can´t load help.");
         }
-
     }
     
     @FXML
@@ -357,6 +357,7 @@ public class Controller implements Initializable {
             } else {
                 oldvalue = String.valueOf(td.format(input1)) + "th root of ";
             }
+            
             operation.setText(oldvalue);
             ps = 7;
             point = 0;

@@ -7,7 +7,6 @@
  * @package calculatorfx
  * @see Math.java
  */
-
 package calculatorfx;
 
 public interface IMath {
@@ -26,9 +25,9 @@ public interface IMath {
 
     double Root(double n, double x) throws Exception;
 
-    double Abs(double nonAbs);
-
     long toBinary(long basis);
+    
+    double Abs(double nonAbs);
 }
 
 /*** END OF FILE Math.java ***/
