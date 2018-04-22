@@ -187,7 +187,7 @@ public class Controller implements Initializable {
             stage.showAndWait();
 
         } catch (Exception e) {
-            System.err.println("Can´t load help.");
+            System.err.println("Cannot load help.");
         }
     }
     

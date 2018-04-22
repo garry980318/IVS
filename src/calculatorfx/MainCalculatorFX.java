@@ -8,6 +8,7 @@
  */
 package calculatorfx;
 
+import java.util.Locale;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -23,6 +24,7 @@ public class MainCalculatorFX extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         
+        Locale.setDefault(Locale.UK);
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/CalcFX.fxml"));
         Scene scene = new Scene(root);
         scene.getStylesheets().add("/styles/Style.css"); /**< Added custom css styling */
