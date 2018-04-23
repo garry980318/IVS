@@ -1,0 +1,11 @@
+Pro profilování jsem použil profiler v prostředí NetBeans IDE 8.2 v módu profilace
+metod (měření času stráveného v metodách). Nejdříve jsem přesměroval standartní
+vstup na čtení ze souboru s náhodně vygenerovanými čísly pro výpočet standartní
+odchylky. Po provedení profilingu jsem zjistil, že program tráví nejvíce času
+(>90% pro každý z testovaných počtů číselných hodnot na vstupu - 10, 100 a 1000)
+čtením pomocí funkce Scanner. Vzhledem k tomu, že touto funkcí tráví relativně
+nejvíce času, pro optimalizaci bych se zaměřil na použití jiné metody čtení ze
+standartního vstupu (například BufferedReader).
+
+Přikládám screenshoty jednotlivých výstupů profileru.
+(vystup10.png, vystup100.png, vystup1000.png)

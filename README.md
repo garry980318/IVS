@@ -1,8 +1,7 @@
-Platforms
+Platform
 ---------
 
-- Windows 64bit
-- Ubuntu 64bit
+Windows 64bit
 
 Authors
 ------
