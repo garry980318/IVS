@@ -24,7 +24,8 @@ import java.util.Random;
 import static org.junit.Assume.assumeNoException;
 
 /**
- * @class Class containing the tests.
+ * @class MathTest
+ * @brief Class containing the tests.
  * @post Custom math library is tested whether it works as desired or not.
  */
 public class MathTest {
