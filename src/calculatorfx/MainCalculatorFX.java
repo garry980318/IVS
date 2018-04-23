@@ -17,8 +17,10 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 /**
- * @class Main class of the calculator launching the application
+ * @class MainCalculatorFX
+ * @brief Main class of the calculator launching the application
  */
+
 public class MainCalculatorFX extends Application {
     
     @Override
