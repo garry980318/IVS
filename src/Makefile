@@ -12,6 +12,7 @@ repoDir = makedir/repo
 docDir = makedir/doc
 installDir = makedir/install
 latexDir = makedir/doxy/latex
+doxyDir = makedir/doxy
 jarName = CalculatorFX
 repo = ./mockup ./plan ./profiling ./src .gitignore debugging.png hodnoceni.txt LICENSE README.md screenshot.PNG skutecnost.txt dokumentace.pdf
 
@@ -52,13 +53,13 @@ test:
 doc:
 	rm -rf ../dokumentace.pdf
 	mkdir -p ../$(latexDir)
-	doxygen Doxyfile
-	cd ../$(latexDir); \
+	cd ../$(doxyDir); doxygen ../../src/Doxyfile
+	cd $(latexDir); \
 		latex refman.tex; \
 		dvips refman.dvi; \
 		ps2pdf refman.ps
 	mv ../$(latexDir)/refman.pdf ../../dokumentace.pdf
-	rm -rf ../$(latexDir)
+	cd ../; rm -rf $(latexDir) $(doxyDir)
 
 # runs .jar
 run:
