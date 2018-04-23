@@ -54,7 +54,10 @@ doc:
 	rm -rf ../dokumentace.pdf
 	mkdir -p ../$(latexDir)
 	cd ../; doxygen ./src/Doxyfile
-	cd ../$(latexDir); latex refman.tex; dvips refman.dvi; ps2pdf refman.ps
+	cd ../$(latexDir); \
+		latex refman.tex; \
+		dvips refman.dvi; \
+		ps2pdf refman.ps
 	mv ../$(latexDir)/refman.pdf ../dokumentace.pdf
 	cd ../; rm -rf $(doxyDir)
 
