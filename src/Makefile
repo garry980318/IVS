@@ -53,13 +53,10 @@ test:
 doc:
 	rm -rf ../dokumentace.pdf
 	mkdir -p ../$(latexDir)
-	cd ../$(doxyDir); doxygen ../../src/Doxyfile
-	cd $(latexDir); \
-		latex refman.tex; \
-		dvips refman.dvi; \
-		ps2pdf refman.ps
-	mv ../$(latexDir)/refman.pdf ../../dokumentace.pdf
-	cd ../; rm -rf $(latexDir) $(doxyDir)
+	cd ../; doxygen ./src/Doxyfile
+	cd ../$(latexDir); latex refman.tex; dvips refman.dvi; ps2pdf refman.ps
+	mv ../$(latexDir)/refman.pdf ../dokumentace.pdf
+	cd ../; rm -rf $(doxyDir)
 
 # runs .jar
 run:
