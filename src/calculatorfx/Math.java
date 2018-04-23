@@ -9,7 +9,8 @@
 package calculatorfx;
 
 /**
- * @class Class containing the methods of the math library.
+ * @class Math
+ * @brief Class containing the methods of the math library.
  * @see MathTest.java where the functionality is tested.
  */
 public class Math implements IMath {
