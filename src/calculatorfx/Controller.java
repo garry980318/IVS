@@ -22,6 +22,11 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
+/**
+ * @class Controller
+ * @brief The controller of the calculator
+ */
+
 public class Controller implements Initializable {
 
     @FXML
