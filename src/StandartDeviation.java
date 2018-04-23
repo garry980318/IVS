@@ -12,7 +12,8 @@ package calculatorfx;
 import java.util.Scanner;
 
 /**
- * @class Implementation of the SD, includes main.
+ * @class StandartDeviation
+ * @brief Implementation of the SD, includes main.
  * @pre The data, out of which the SD is to be calculated, need to be available on the standart input after the program is executed.
  * @post SD is printed to the standart output.
  */
