@@ -3,6 +3,8 @@ Platform
 
 Windows 64bit
 
+- Start the installer and follow the instructions.
+
 Authors
 ------
 
