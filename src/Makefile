@@ -11,7 +11,7 @@ jarName = CalculatorFX
 SD = StandartDeviation.java
 
 groupName = xbolfr00_xgrenc00_xholub42_xvasic27
-repo = ./mockup ./plan ./profiling ./src .gitignore debugging.png hodnoceni.txt LICENSE README.md screenshot.PNG skutecnost.txt dokumentace.pdf userManual.pdf
+repo = ./mockup ./plan ./profiling ./src .git .gitignore debugging.png hodnoceni.txt LICENSE README.md screenshot.PNG skutecnost.txt dokumentace.pdf userManual.pdf
 repoDir = makedir/xbolfr00_xgrenc00_xholub42_xvasic27/repo
 docDir = makedir/xbolfr00_xgrenc00_xholub42_xvasic27/doc
 installDir = makedir/xbolfr00_xgrenc00_xholub42_xvasic27/install
