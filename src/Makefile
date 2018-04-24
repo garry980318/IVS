@@ -55,6 +55,7 @@ test:
 
 # runs doxygen
 doc:
+	rm -rf ../doxyWarn.txt
 	rm -rf ../dokumentace.pdf
 	mkdir -p ../$(latexDir)
 	cd ../; doxygen ./src/Doxyfile
