@@ -1,1 +1,4 @@
-
+xbolfr00 100 (project plan (MS Planner), GUI, GUI mockup, link GUI and Math.java, Installer/Uninstaller)
+xgrenc00 110 (project plan, GUI, GUI mockup, link GUI and Math.java, README.md, create remote repository, Makefile)
+xholub42 100 (dokumentace.pdf, userDocumentation.pdf, profiling, debugging, StandartDeviation.java)
+xvasic27 90  (IMath.java, MathTest.java, Math.java)
