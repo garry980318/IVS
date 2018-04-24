@@ -47,7 +47,7 @@ pack:
 
 # cleans everything that should not be uploaded
 clean:
-	rm -rf $(jarDir)
+	rm -rf ../$(jarDir)
 
 # runs MathTest
 test:
