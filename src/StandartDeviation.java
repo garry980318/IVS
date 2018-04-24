@@ -17,9 +17,9 @@ import java.util.Scanner;
  * @pre The data, out of which the SD is to be calculated, need to be available on the standart input after the program is executed.
  * @post SD is printed to the standart output.
  */
-public class StandartDeviation{
+public class StandartDeviation {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
         IMath mathLib = new Math(); /**< Import of the math library */
 
@@ -40,7 +40,7 @@ public class StandartDeviation{
         }
 
         double mean = mathLib.Div(sumOfNumbers, countOfNumbers); /**< Mean of all inputted numbers */
-        double result = mathLib.Root(mathLib.Div(mathLib.Sub(sumOfSquaredNumbers, mathLib.Mult(countOfNumbers, mathLib.Pow(mean, 2))),mathLib.Sub(countOfNumbers,1))); /**< Implementation of the equation of the SD */
+        double result = mathLib.Root(2, mathLib.Div(mathLib.Sub(sumOfSquaredNumbers, mathLib.Mult(countOfNumbers, mathLib.Pow(mean, 2))),mathLib.Sub(countOfNumbers,1))); /**< Implementation of the equation of the SD */
 
         System.out.println("standart dev is " + result);
     }

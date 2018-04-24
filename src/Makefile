@@ -30,24 +30,17 @@ CalculatorFX:
 	mkdir -p ../$(classDir)
 	cp -r $(otherSrc) ../$(jarDir)
 	javac -g -d ../$(classDir) $(javaSrc)
-	cd ../$(jarDir); \
-		jar cfe $(JAR_NAME).jar calculatorfx.MainCalculatorFX *
+	cd ../$(jarDir); jar cfe $(JAR_NAME).jar calculatorfx.MainCalculatorFX *
+	javac -g -d ../$(jarDir) StandartDeviation.java
 
 # packs project
 pack:
 	rm -rf ../$(Dir)/$(GROUP_NAME).zip
-	mkdir -p ../$(repoDir); \
-		cd ../; \
-		cp -r $(repo) ./$(repoDir)
-	mkdir -p ../$(docDir); \
-		cd ../; \
-		cp dokumentace.pdf ./$(docDir)
-	mkdir -p ../$(installDir); \
-		cd ../; \
-		cp DedSec_Calculator_setup.exe ./$(installDir)
+	mkdir -p ../$(repoDir); cd ../; cp -r $(repo) ./$(repoDir)
+	mkdir -p ../$(docDir); cd ../; cp dokumentace.pdf ./$(docDir)
+	mkdir -p ../$(installDir); cd ../; cp DedSec_Calculator_setup.exe ./$(installDir)
 	zip -r ../$(Dir)/$(GROUP_NAME).zip $(repoDir) $(docDir) $(installDir)
-	cd ../; \
-		rm -rf $(repoDir) $(docDir) $(installDir)
+	cd ../; rm -rf $(repoDir) $(docDir) $(installDir)
 
 # cleans everything that should not be uploaded
 clean:
@@ -55,24 +48,17 @@ clean:
 
 # runs MathTest
 test:
-	cd ./test; \
-		$(JUNIT) $(testLib)
+	cd ./test; $(JUNIT) $(testLib)
 
 # runs doxygen
 doc:
 	rm -rf ../dokumentace.pdf
 	mkdir -p ../$(latexDir)
-	cd ../; \
-		doxygen ./src/Doxyfile
-	cd ../$(latexDir); \
-		latex refman.tex; \
-		dvips refman.dvi; \
-		ps2pdf refman.ps
+	cd ../; doxygen ./src/Doxyfile
+	cd ../$(latexDir); latex refman.tex; dvips refman.dvi; ps2pdf refman.ps
 	mv ../$(latexDir)/refman.pdf ../dokumentace.pdf
-	cd ../; \
-		rm -rf $(doxyDir)
+	cd ../; rm -rf $(doxyDir)
 
 # runs .jar
 run:
-	cd ../$(jarDir); \
-		java -jar $(JAR_NAME).jar
+	cd ../$(jarDir); java -jar $(JAR_NAME).jar
