@@ -12,9 +12,10 @@ SD = StandartDeviation.java
 
 groupName = xbolfr00_xgrenc00_xholub42_xvasic27
 repo = ./mockup ./plan ./profiling ./src .gitignore debugging.png hodnoceni.txt LICENSE README.md screenshot.PNG skutecnost.txt dokumentace.pdf userManual.pdf
-repoDir = makedir/repo
-docDir = makedir/doc
-installDir = makedir/install
+repoDir = makedir/xbolfr00_xgrenc00_xholub42_xvasic27/repo
+docDir = makedir/xbolfr00_xgrenc00_xholub42_xvasic27/doc
+installDir = makedir/xbolfr00_xgrenc00_xholub42_xvasic27/install
+groupDir = makedir/xbolfr00_xgrenc00_xholub42_xvasic27
 
 latexDir = makedir/doxy/latex
 doxyDir = makedir/doxy
@@ -42,8 +43,8 @@ pack:
 	mkdir -p ../$(repoDir); cd ../; cp -r $(repo) ./$(repoDir)
 	mkdir -p ../$(docDir); cd ../; cp dokumentace.pdf ./$(docDir)
 	mkdir -p ../$(installDir); cd ../; cp DedSec_Calculator_setup.exe ./$(installDir)
-	zip -r ../$(Dir)/$(GROUP_NAME).zip $(repoDir) $(docDir) $(installDir)
-	cd ../; rm -rf $(repoDir) $(docDir) $(installDir)
+	cd ../$(Dir); zip -r $(groupName).zip $(groupName)
+	cd ../; rm -rf $(groupDir)
 
 # cleans everything that should not be uploaded
 clean:
