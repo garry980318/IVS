@@ -1,20 +1,23 @@
 # Makefile, IVS projekt 2, DedSec
 # author: Radoslav Grencik
 
-groupName = xbolfr00_xgrenc00_xholub42_xvasic27
-
 javaSrc = ./calculatorfx/MainCalculatorFX.java ./calculatorfx/Controller.java ./calculatorfx/IMath.java ./calculatorfx/Math.java
 otherSrc = ./GUI ./icons ./styles
+
 Dir = makedir
 jarDir = makedir/JAR
 classDir = makedir/JAR/calculatorfx
+jarName = CalculatorFX
+SD = StandartDeviation.java
+
+groupName = xbolfr00_xgrenc00_xholub42_xvasic27
+repo = ./mockup ./plan ./profiling ./src .gitignore debugging.png hodnoceni.txt LICENSE README.md screenshot.PNG skutecnost.txt dokumentace.pdf userManual.pdf
 repoDir = makedir/repo
 docDir = makedir/doc
 installDir = makedir/install
+
 latexDir = makedir/doxy/latex
 doxyDir = makedir/doxy
-jarName = CalculatorFX
-repo = ./mockup ./plan ./profiling ./src .gitignore debugging.png hodnoceni.txt LICENSE README.md screenshot.PNG skutecnost.txt dokumentace.pdf
 
 testLib = MathTest.java
 JUNIT = java -cp .:/usr/share/java/junit.jar org.junit.runner.JUnitCore
@@ -31,7 +34,7 @@ CalculatorFX:
 	cp -r $(otherSrc) ../$(jarDir)
 	javac -g -d ../$(classDir) $(javaSrc)
 	cd ../$(jarDir); jar cfe $(JAR_NAME).jar calculatorfx.MainCalculatorFX *
-	javac -g -d ../$(jarDir) StandartDeviation.java
+	javac -g -d ../$(jarDir) $(SD)
 
 # packs project
 pack:
