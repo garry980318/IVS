@@ -1,12 +1,11 @@
 # Makefile, IVS projekt 2, DedSec
 # author: Radoslav Grencik
 
-javaSrc = ./calculatorfx/MainCalculatorFX.java ./calculatorfx/Controller.java ./calculatorfx/IMath.java ./calculatorfx/Math.java
+javaSrc = MainCalculatorFX.java Controller.java IMath.java Math.java
 otherSrc = ./GUI ./icons ./styles
 
 Dir = makedir
 jarDir = makedir/JAR
-classDir = makedir/JAR/calculatorfx
 jarName = CalculatorFX
 SD = StandartDeviation.java
 
@@ -21,7 +20,7 @@ latexDir = makedir/doxy/latex
 doxyDir = makedir/doxy
 
 testLib = MathTest.java
-JUNIT = java -cp .:/usr/share/java/junit.jar org.junit.runner.JUnitCore
+JUNIT = java -cp .:/usr/share/java/junit.jar junit.textui.TestRunner
 
 # compiles project
 all: CalculatorFX
@@ -31,15 +30,15 @@ all: CalculatorFX
 # compiles .java to .class then makes .jar
 CalculatorFX:
 	rm -rf ../$(jarDir)
-	mkdir -p ../$(classDir)
+	mkdir -p ../$(jarDir)
 	cp -r $(otherSrc) ../$(jarDir)
-	javac -g -d ../$(classDir) $(javaSrc)
-	cd ../$(jarDir); jar cfe $(JAR_NAME).jar calculatorfx.MainCalculatorFX *
+	cd calculatorfx; javac -g -d ../../$(jarDir) $(javaSrc)
+	cd ../$(jarDir); jar cfe $(jarName).jar calculatorfx.MainCalculatorFX *
 	javac -g -d ../$(jarDir) $(SD)
 
 # packs project
 pack:
-	rm -rf ../$(Dir)/$(GROUP_NAME).zip
+	rm -rf ../$(Dir)/$(groupName).zip
 	mkdir -p ../$(repoDir); cd ../; cp -r $(repo) ./$(repoDir)
 	mkdir -p ../$(docDir); cd ../; cp dokumentace.pdf ./$(docDir)
 	mkdir -p ../$(installDir); cd ../; cp DedSec_Calculator_setup.exe ./$(installDir)
@@ -50,7 +49,7 @@ pack:
 clean:
 	rm -rf ../$(jarDir)
 
-# runs MathTest
+# runs MathTest (DOES NOT WORK...)
 test:
 	cd ./test; $(JUNIT) $(testLib)
 
@@ -66,4 +65,4 @@ doc:
 
 # runs .jar
 run:
-	cd ../$(jarDir); java -jar $(JAR_NAME).jar
+	cd ../$(jarDir); java -jar $(jarName).jar
