@@ -1,9 +1,13 @@
-Platform
+Platforms
 ---------
 
 Windows 64bit
 
 - Start the installer and follow the instructions.
+
+Ubuntu 64bit
+
+- Use Makefile to run the Calculator (make, make run).
 
 Authors
 ------
