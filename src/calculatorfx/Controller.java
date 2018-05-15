@@ -115,7 +115,7 @@ public class Controller implements Initializable {
     Math math = new Math();
     DecimalFormat td = new DecimalFormat("0.########"); /**< Format for decimal notation of a number */
     DecimalFormat ed = new DecimalFormat("0.########E0"); /**< Format for scientific notation of a number */
-    
+
     /**
      * Method getDigits counts the digits in number (decimal dot and minus included).
      *
@@ -174,6 +174,7 @@ public class Controller implements Initializable {
 
         if (getDigits(result) > 16) { /**< Number contains more than 16 digits and is displayed in scientific notation */
             display.setText(String.valueOf(ed.format(result)));
+            ispoint = 1;
         } else { /**< Number contains less or equal to 16 digits and is displayed in normal notation */
             display.setText(String.valueOf(td.format(result)));
         }
@@ -181,13 +182,13 @@ public class Controller implements Initializable {
 
     @FXML
     void showHelp(ActionEvent event) {
-        
+
         try {
             Parent root = FXMLLoader.load(getClass().getResource("/GUI/Help.fxml"));
             Stage stage = new Stage();
             stage.setTitle("HELP");
             Image image = new Image("/icons/icon.png");
-            stage.getIcons().add(image);      
+            stage.getIcons().add(image);
             stage.setScene(new Scene(root));
             stage.showAndWait();
 
@@ -195,7 +196,7 @@ public class Controller implements Initializable {
             System.err.println("Cannot load help.");
         }
     }
-    
+
     @FXML
     void Calculation(ActionEvent event) throws Exception {
 
@@ -362,7 +363,7 @@ public class Controller implements Initializable {
             } else {
                 oldvalue = String.valueOf(td.format(input1)) + "th root of ";
             }
-            
+
             operation.setText(oldvalue);
             ps = 7;
             point = 0;
